@@ -2,42 +2,40 @@ import {Request, Response} from "express";
 import httpStatus from "http-status";
 import {ProblemDetails} from "problem-details-http";
 import {Controller} from "../../../shared/infrastructure/controllers/Controller";
-import {CommandBus} from "../../../shared/application/commands/CommandBus";
-import {RegisterUserCommand} from "../../application/commands/RegisterUserCommand";
+import {QueryBus} from "../../../shared/application/queries/QueryBus";
+import {LoginUserResponse} from "../../application/queries/LoginUserResponse";
+import {RegisterUserQuery} from "../../application/queries/RegisterUserQuery";
 
 type RegisterUserRequest = {
-    id: string;
     fullName: string;
-    username: string;
     email: string;
     password: string;
 };
 
 export class RegisterUserController extends Controller {
-    constructor(private readonly commandBus: CommandBus) {
+    constructor(private readonly queryBus: QueryBus) {
         super();
     }
 
     async run(req: Request<RegisterUserRequest>, res: Response) {
-        const error = await this.createUser(req);
-        if (error) {
-            res.status(error.status).json(error.toJson());
+        const response = await this.createUser(req);
+
+        if (response instanceof ProblemDetails) {
+            res.status(response.status).json(response.toJson());
         } else {
-            res.status(httpStatus.CREATED).json({});
+            res.status(httpStatus.CREATED).json(response);
         }
     }
 
-    private async createUser({body}: Request<RegisterUserRequest>): Promise<ProblemDetails | void> {
+    private async createUser({body}: Request<RegisterUserRequest>): Promise<ProblemDetails | LoginUserResponse> {
         try {
-            const registerUserCommand = new RegisterUserCommand(
-                body.id,
+            const query = new RegisterUserQuery(
                 body.fullName,
                 body.email,
-                body.username,
                 body.password
             );
 
-            await this.commandBus.dispatch(registerUserCommand)
+            return await this.queryBus.ask<LoginUserResponse>(query);
         } catch (error) {
             return this.errorResponse(error);
         }

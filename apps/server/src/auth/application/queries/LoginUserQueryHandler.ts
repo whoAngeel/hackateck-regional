@@ -1,17 +1,16 @@
 import {LoginUserQuery} from "./LoginUserQuery";
 import {LoginUserResponse} from "./LoginUserResponse";
 import {QueryHandler} from "../../../shared/application/queries/QueryHandler";
-import {AuthRepository} from "../../domain/AuthRepository";
 import {UserRepository} from "../../../friends/domain/repositories/UserRepository";
 import {TokenGenerator} from "../../domain/TokenGenerator";
 import {InvalidCredentialsError} from "../../domain/errors/InvalidCredentialsError";
 import {User} from "../../../friends/domain/entities/User";
 import {Query} from "../../../shared/application/queries/Query";
 import {Email} from "../../../friends/domain/value-objects/Email";
+
 export class LoginUserQueryHandler implements QueryHandler<LoginUserQuery, LoginUserResponse> {
 
-    constructor(private readonly authRepository: AuthRepository,
-                private readonly userRepository: UserRepository,
+    constructor(private readonly userRepository: UserRepository,
                 private readonly tokenGenerator: TokenGenerator
     ) {
     }
@@ -37,7 +36,7 @@ export class LoginUserQueryHandler implements QueryHandler<LoginUserQuery, Login
     }
 
     private async ensureValidCredentials(email: string, password: string) {
-        const credentialsAreCorrect = await this.authRepository.checkPassword(email, password);
+        const credentialsAreCorrect = await this.userRepository.checkPassword(email, password);
 
         if (!credentialsAreCorrect) {
             throw new InvalidCredentialsError();
