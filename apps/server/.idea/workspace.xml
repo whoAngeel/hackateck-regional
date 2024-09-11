@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="cd53600a-8e1c-4d1b-9a1e-f7b8fb6da146" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/friends/application/create/CreateUserCommand.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/friends/application/create/CreateUserCommandHandler.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/friends/application/create/LogOnUserCreated.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/friends/application/update/UpdateUserCommand.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/friends/application/update/UpdateUserCommandHandler.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/friends/domain/entities/User.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/friends/domain/entities/UserId.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/friends/domain/errors/EmailAlreadyTakenError.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/friends/domain/errors/InvalidEmailAddressError.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/friends/domain/errors/InvalidFullNameError.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/friends/domain/errors/InvalidUserNameError.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/friends/domain/errors/UserIdAlreadyTakenError.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/friends/domain/errors/UsernameAlreadyTakenError.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/friends/domain/events/UserCreated.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/friends/domain/repositories/UserRepository.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/friends/domain/value-objects/Email.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/friends/domain/value-objects/FullName.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/friends/domain/value-objects/UserName.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/friends/infrastructure/InMemoryUserRepository.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/shared/application/commands/Command.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/shared/application/commands/CommandBus.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/shared/application/commands/CommandHandler.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/shared/application/commands/CommandHandlerNotRegisteredError.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/shared/application/queries/Query.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/shared/application/queries/QueryBus.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/shared/application/queries/QueryHandler.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/shared/application/queries/QueryHandlerNotRegisteredError.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/shared/application/queries/Response.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/shared/domain/entities/Entity.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/shared/domain/errors/DomainError.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/shared/domain/errors/InvalidUUIDError.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/shared/domain/events/DomainEvent.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/shared/domain/events/DomainEventSubscriber.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/shared/domain/events/EventBus.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/shared/domain/events/HasDomainEvents.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/shared/domain/values-objects/IEquatable.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/shared/domain/values-objects/UUID.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/shared/domain/values-objects/ValueObject.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/shared/infrastructure/ErrorMapper.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/shared/infrastructure/InMemoryEventBus.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/shared/infrastructure/RequiredValuesError.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/shared/infrastructure/RequiredValuesValidator.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/shared/infrastructure/commands/CommandHandlers.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/shared/infrastructure/commands/InMemoryCommandBus.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/shared/infrastructure/controllers/Controller.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/shared/infrastructure/controllers/HealthController.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/shared/infrastructure/queries/InMemoryQueryBus.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/shared/infrastructure/queries/QueryHandlers.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/../../package-lock.json" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="TypeScript File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="PackageJsonUpdateNotifier">
+    <dismissed value="$PROJECT_DIR$/package.json" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 3
+}</component>
+  <component name="ProjectId" id="2lwImSkPESuKGBs2QxoiNCEViQH" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="autoscrollToSource" value="true" />
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="openDirectoriesWithSingleClick" value="true" />
+    <option name="showLibraryContents" value="true" />
+    <option name="showMembers" value="true" />
+    <option name="showScratchesAndConsoles" value="false" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "HTTP Request.HealthRequest | #1.executor": "Run",
+    "HTTP Request.LoginUserRequest | Success.executor": "Run",
+    "HTTP Request.RegisterUserRequest | Success.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "Vitest.Login User Controller.executor": "Run",
+    "Vitest.RegisterUserController.executor": "Run",
+    "git-widget-placeholder": "main",
+    "last_opened_file_path": "/home/carlos/programacion/hackateck-regional/apps/server/src",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "ts.external.directory.path": "/home/carlos/.local/share/JetBrains/Toolbox/apps/webstorm/plugins/javascript-plugin/jsLanguageServicesImpl/external",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src" />
+      <recent name="$PROJECT_DIR$/src/shared" />
+      <recent name="$PROJECT_DIR$/src/shared/events" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/auth/infrastructure" />
+      <recent name="$PROJECT_DIR$/src/auth/domain" />
+      <recent name="$PROJECT_DIR$/src/auth/application" />
+      <recent name="$PROJECT_DIR$/src/shared/infrastructure/commands" />
+      <recent name="$PROJECT_DIR$/src/shared/infrastructure" />
+    </key>
+  </component>
+  <component name="RunManager" selected="HTTP Request.RegisterUserRequest | Success">
+    <configuration name="HealthRequest | #1" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$PROJECT_DIR$/requests/HealthRequest.http" requestIdentifier="#1" runType="Run single request">
+      <method v="2" />
+    </configuration>
+    <configuration name="LoginUserRequest | Success" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$PROJECT_DIR$/requests/LoginUserRequest.http" requestIdentifier="Success" runType="Run single request">
+      <method v="2" />
+    </configuration>
+    <configuration name="RegisterUserRequest | Success" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$PROJECT_DIR$/requests/RegisterUserRequest.http" requestIdentifier="Success" runType="Run single request">
+      <method v="2" />
+    </configuration>
+    <configuration name="Login User Controller" type="JavaScriptTestRunnerVitest" temporary="true" nameIsGenerated="true">
+      <node-interpreter value="project" />
+      <vitest-package value="$PROJECT_DIR$/../../node_modules/vitest" />
+      <working-dir value="$PROJECT_DIR$" />
+      <vitest-options value="--run" />
+      <envs />
+      <scope-kind value="SUITE" />
+      <test-file value="$PROJECT_DIR$/tests/auth/controllers/LoginUserController.test.ts" />
+      <test-names>
+        <test-name value="Login User Controller" />
+      </test-names>
+      <method v="2" />
+    </configuration>
+    <configuration name="RegisterUserController" type="JavaScriptTestRunnerVitest" temporary="true" nameIsGenerated="true">
+      <node-interpreter value="project" />
+      <vitest-package value="$PROJECT_DIR$/../../node_modules/vitest" />
+      <working-dir value="$PROJECT_DIR$" />
+      <vitest-options value="--run" />
+      <envs />
+      <scope-kind value="SUITE" />
+      <test-file value="$PROJECT_DIR$/tests/auth/controllers/RegisterUserController.test.ts" />
+      <test-names>
+        <test-name value="RegisterUserController" />
+      </test-names>
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="HTTP Request.RegisterUserRequest | Success" />
+        <item itemvalue="HTTP Request.LoginUserRequest | Success" />
+        <item itemvalue="HTTP Request.HealthRequest | #1" />
+        <item itemvalue="Vitest.RegisterUserController" />
+        <item itemvalue="Vitest.Login User Controller" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-js-predefined-1d06a55b98c1-0b3e54e931b4-JavaScript-WS-241.18034.50" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="cd53600a-8e1c-4d1b-9a1e-f7b8fb6da146" name="Changes" comment="" />
+      <created>1726084871302</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1726084871302</updated>
+      <workItem from="1726084872432" duration="447000" />
+      <workItem from="1726085342030" duration="2516000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>
