@@ -41,7 +41,21 @@ function Login() {
 				<h2 className="text-xl font-semibold text-center my-2">
 					Inicia sesión para jugar
 				</h2>
-				<Form.Item label="Correo" name="email" required>
+				<Form.Item
+					label="Correo"
+					name="email"
+					required
+					rules={[
+						{
+							required: true,
+							message: "Por favor ingresa tu correo",
+						},
+						{
+							type: "email",
+							message: "Por favor ingresa un correo valido",
+						},
+					]}
+				>
 					<Input placeholder="usuario@example.com" />
 				</Form.Item>
 				<Form.Item label="Contraseña" name="password" required>

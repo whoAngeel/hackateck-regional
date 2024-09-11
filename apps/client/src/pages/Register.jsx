@@ -44,13 +44,61 @@ function Register() {
 				<h2 className="text-xl font-semibold text-center my-2">
 					Crear una cuenta nueva
 				</h2>
-				<Form.Item label="Nombre" name="fullname" required>
+				<Form.Item
+					label="Nombre"
+					name="fullname"
+					required
+					rules={[
+						{
+							required: true,
+							message: "Por favor ingresa tu nombre",
+						},
+						{
+							whitespace: true,
+							message: "Por favor ingresa tu nombre",
+						},
+					]}
+				>
 					<Input placeholder="Juan Perez" />
 				</Form.Item>
-				<Form.Item label="Correo" name="email" required>
+				<Form.Item
+					label="Correo"
+					name="email"
+					required
+					rules={[
+						{ required: true, message: "Por favor ingresa tu correo" },
+						{
+							type: "email",
+							message: "Por favor ingresa un correo valido",
+						},
+						{
+							whitespace: true,
+							message: "Por favor ingresa tu correo",
+						},
+					]}
+				>
 					<Input placeholder="usuario@example.com" />
 				</Form.Item>
-				<Form.Item label="Contraseña" name="password" required>
+				<Form.Item
+					label="Contraseña"
+					name="password"
+					required
+					rules={[
+						{
+							required: true,
+							message: "Por favor ingresa una contraseña",
+						},
+						{
+							whitespace: true,
+							message: "Por favor ingresa una contraseña",
+						},
+						{
+							min: 6,
+							message:
+								"La contraseña debe ser de al menos 6 caracteres",
+						},
+					]}
+				>
 					<Input.Password placeholder="***********" />
 				</Form.Item>
 				<Form.Item shouldUpdate>
