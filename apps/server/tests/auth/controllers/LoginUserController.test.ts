@@ -1,26 +1,26 @@
-import {afterEach, beforeEach, describe, expect, it} from "vitest";
+import {afterEach, beforeAll, describe, expect, it} from "vitest";
 import {Application} from "../../../src/app";
 import httpStatus from "http-status";
 import request from "supertest";
-import {UserMother} from "../../friends/UserMother";
 import {ErrorMapper} from "../../../src/shared/infrastructure/ErrorMapper";
 import {InMemoryUserRepository} from "../../../src/friends/infrastructure/InMemoryUserRepository";
-import {InMemoryAuthRepository} from "../../../src/auth/infrastructure/repositories/InMemoryAuthRepository";
 import {InvalidCredentialsError} from "../../../src/auth/domain/errors/InvalidCredentialsError";
 
 describe("Login User Controller", async () => {
     let app: Application;
     let userRepository: InMemoryUserRepository;
-    let authRepository: InMemoryAuthRepository;
     const registerRoute = '/api/auth/register';
     const loginRoute = '/api/auth/login';
 
-    beforeEach(async () => {
+    beforeAll(async () => {
         app = await Application.initialize();
         userRepository = app.container.get<InMemoryUserRepository>("UserRepository");
-        authRepository = app.container.get<InMemoryAuthRepository>("AuthRepository");
 
-        const user = UserMother.normal();
+        const user = {
+            fullName: 'John Doe',
+            email: 'johnDoe.com',
+            password: 'securePassword123',
+        }
 
         await request(app.server)
             .post(registerRoute)
@@ -28,24 +28,26 @@ describe("Login User Controller", async () => {
             .send(user);
 
         expect(userRepository.count()).toBe(1);
-        expect(await authRepository.checkPassword(user.email, user.password)).toBe(true);
+        expect(await userRepository.checkPassword(user.email, user.password)).toBe(true);
     });
 
     afterEach(async () => {
         app = await Application.initialize();
         userRepository = app.container.get<InMemoryUserRepository>("UserRepository");
-        authRepository = app.container.get<InMemoryAuthRepository>("AuthRepository");
     });
 
     it('should log in an user successfully', async () => {
-        const user = UserMother.normal();
+        const user = {
+            fullName: 'John Doe',
+            email: 'johnDoe.com',
+            password: 'securePassword123',
+        }
         const expectedStatus = httpStatus.OK;
         const expectedResponse = {
             user: {
-                id: user.id,
+                id: expect.any(String),
                 email: user.email,
                 fullName: user.fullName,
-                username: user.username
             },
             token: expect.any(String)
         };
@@ -60,7 +62,11 @@ describe("Login User Controller", async () => {
     })
 
     it('should validate an invalid password', async () => {
-        const user = UserMother.normal();
+        const user = {
+            fullName: 'John Doe',
+            email: 'johnDoe.com',
+            password: 'securePassword123',
+        }
         const invalidPassword = 'invalid-password';
         const expectedStatus = httpStatus.UNAUTHORIZED;
         const error = new InvalidCredentialsError();
@@ -76,7 +82,11 @@ describe("Login User Controller", async () => {
     })
 
     it('should validate an invalid email', async () => {
-        const user = UserMother.normal();
+        const user = {
+            fullName: 'John Doe',
+            email: 'johnDoe.com',
+            password: 'securePassword123',
+        }
         const invalidEmail = 'invalidEmail@email.com';
         const expectedStatus = httpStatus.UNAUTHORIZED;
         const error = new InvalidCredentialsError();

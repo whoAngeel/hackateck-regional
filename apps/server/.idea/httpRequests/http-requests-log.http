@@ -1,3 +1,138 @@
+POST http://localhost:3000/api/auth/login
+Content-Type: application/json
+Content-Length: 59
+User-Agent: IntelliJ HTTP Client/WebStorm 2024.1.5
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+{
+  "email": "carlos@gmail.com",
+  "password": "12345678"
+}
+
+<> 2024-09-11T173127.200.json
+
+###
+
+POST http://localhost:3000/api/auth/register
+Content-Type: application/json
+Content-Length: 85
+User-Agent: IntelliJ HTTP Client/WebStorm 2024.1.5
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+{
+  "fullName": "john doe",
+  "email": "carlos@gmail.com",
+  "password": "12345678"
+}
+
+<> 2024-09-11T173124.201.json
+
+###
+
+POST http://localhost:3000/api/auth/login
+Content-Type: application/json
+Content-Length: 59
+User-Agent: IntelliJ HTTP Client/WebStorm 2024.1.5
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+{
+  "email": "carlos@gmail.com",
+  "password": "12345678"
+}
+
+<> 2024-09-11T173121.401.json
+
+###
+
+GET http://localhost:3000/api/health
+User-Agent: IntelliJ HTTP Client/WebStorm 2024.1.5
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+content-length: 0
+
+<> 2024-09-11T173118.200.json
+
+###
+
+POST http://localhost:3000/api/auth/login
+Content-Type: application/json
+Content-Length: 59
+User-Agent: IntelliJ HTTP Client/WebStorm 2024.1.5
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+{
+  "email": "carlos@gmail.com",
+  "password": "12345678"
+}
+
+<> 2024-09-11T172751.200.json
+
+###
+
+POST http://localhost:3000/api/auth/login
+Content-Type: application/json
+Content-Length: 59
+User-Agent: IntelliJ HTTP Client/WebStorm 2024.1.5
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+{
+  "email": "carlos@gmail.com",
+  "password": "12345678"
+}
+
+<> 2024-09-11T172748.200.json
+
+###
+
+POST http://localhost:3000/api/auth/register
+Content-Type: application/json
+Content-Length: 85
+User-Agent: IntelliJ HTTP Client/WebStorm 2024.1.5
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+{
+  "fullName": "john doe",
+  "email": "carlos@gmail.com",
+  "password": "12345678"
+}
+
+<> 2024-09-11T172744.400.json
+
+###
+
+POST http://localhost:3000/api/auth/register
+Content-Type: application/json
+Content-Length: 85
+User-Agent: IntelliJ HTTP Client/WebStorm 2024.1.5
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+{
+  "fullName": "john doe",
+  "email": "carlos@gmail.com",
+  "password": "12345678"
+}
+
+<> 2024-09-11T172740.201.json
+
+###
+
+GET http://localhost:3000/api/health
+User-Agent: IntelliJ HTTP Client/WebStorm 2024.1.5
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+content-length: 0
+
+<> 2024-09-11T172736.200.json
+
+###
+
 POST http://localhost:3000/api/auth/register
 Content-Type: application/json
 Content-Length: 161

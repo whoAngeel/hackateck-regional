@@ -7,9 +7,10 @@ import {LoginUserController} from "../auth/infrastructure/controllers/LoginUserC
 export function registerRouteFiles(router: Router, container: ContainerBuilder) {
     const healthController = container.get<HealthController>('HealthController');
     router.get('/health', healthController.run.bind(healthController));
-    const registerController = container.get<RegisterUserController>('RegisterUserController');
-    const loginController = container.get<LoginUserController>('LoginUserController');
 
+    const registerController = container.get<RegisterUserController>('RegisterUserController');
     router.post('/auth/register', registerController.run.bind(registerController));
+
+    const loginController = container.get<LoginUserController>('LoginUserController');
     router.post('/auth/login', loginController.run.bind(loginController));
 }

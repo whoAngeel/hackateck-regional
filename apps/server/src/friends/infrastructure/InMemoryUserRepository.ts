@@ -2,13 +2,27 @@ import {UserRepository} from "../domain/repositories/UserRepository";
 import {User} from "../domain/entities/User";
 import {Email} from "../domain/value-objects/Email";
 import {UserId} from "../domain/entities/UserId";
-import {UserName} from "../domain/value-objects/UserName";
+import {Password} from "../domain/value-objects/Password";
 
 export class InMemoryUserRepository implements UserRepository {
     readonly users: User[];
 
     constructor() {
         this.users = [];
+    }
+
+    async checkPassword(email: string, password: string): Promise<boolean> {
+       const user = await this.findByEmail(new Email(email));
+
+       if(!user) {
+           return false;
+       }
+
+       return Password.compare(password, user.getPassword().value);
+    }
+
+    getLastUserCreated(): User {
+        return this.users[this.users.length - 1];
     }
 
     count(): number {
@@ -33,9 +47,5 @@ export class InMemoryUserRepository implements UserRepository {
 
     async findById(id: UserId): Promise<User | null> {
         return this.users.find(user => user.id.equals(id)) || null;
-    }
-
-    async findByUsername(username: UserName): Promise<User | null> {
-        return this.users.find(user => user.getUsername().equals(username)) || null;
     }
 }
