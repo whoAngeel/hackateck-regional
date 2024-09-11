@@ -12,17 +12,12 @@ function App() {
 					theme={{
 						token: {
 							// Colores principales
-							colorPrimary: "#00b96b",
-							borderRadius: 4,
-
-							// Colores secundarios
-							colorSecondary: "#87e8de",
-							colorInfo: "#005f3c",
-
+							colorPrimary: "#6BAF58", // Verde medio para elementos primarios
+							colorText: "#FFFFFF", // Texto principal en blanco
+							colorBgContainer: "#A4D37E", // Verde claro para fondos
+							colorInfo: "#B9D04D", // Amarillo verdoso para detalles informativos
+							colorBgLayout: "#E1E8D3", // Gris claro para fondos neutros
 							// Fondo
-							colorBgContainer: "#e8f5e9",
-							colorBgLayout: "#f0f4f0",
-							colorText: "#4e342e",
 						},
 					}}
 				>
