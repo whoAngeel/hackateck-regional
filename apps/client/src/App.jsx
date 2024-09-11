@@ -1,8 +1,9 @@
-import { useState } from "react";
-import { Outlet } from "react-router-dom";
 import AppRouter from "./routes/AppRouter";
 import { ConfigProvider } from "antd";
-
+import { Provider } from "react-redux";
+// import {store, persistor} from
+import { PersistGate } from "redux-persist/integration/react";
+import { store, persistor } from "./redux/store";
 function App() {
 	return (
 		<ConfigProvider
@@ -23,7 +24,11 @@ function App() {
 				},
 			}}
 		>
-			<AppRouter />
+			<Provider store={store}>
+				<PersistGate loading={null} persistor={persistor}>
+					<AppRouter />
+				</PersistGate>
+			</Provider>
 		</ConfigProvider>
 	);
 }

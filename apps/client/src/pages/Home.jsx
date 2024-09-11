@@ -1,11 +1,14 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Navbar from "../components/ui/Navbar";
 import { useNavigate } from "react-router-dom";
 import useAuth from "../utils/useAuth";
+import { logout } from "../redux/auth/auth.slice";
+import { useDispatch } from "react-redux";
 
 function Home() {
 	const navigate = useNavigate();
 	const isAuthenticated = useAuth();
+	const dispatch = useDispatch();
 	const handleStart = () => {
 		if (isAuthenticated) {
 			// Si el usuario está autenticado, lo envías al juego
@@ -15,6 +18,9 @@ function Home() {
 			navigate("/login");
 		}
 	};
+	// useEffect(() => {
+	// 	dispatch(logout());
+	// }, []);
 	return (
 		<div className="flex flex-col min-h-screen">
 			<Navbar />

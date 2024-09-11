@@ -1,9 +1,10 @@
 import { useEffect, useState } from "react";
+import { useSelector } from "react-redux";
 
 function useAuth() {
 	const [isAuthenticated, setIsAuthenticated] = useState(false);
+	const { token } = useSelector((state) => state.auth);
 	useEffect(() => {
-		const token = localStorage.getItem("token");
 		setIsAuthenticated(!!token);
 	}, []);
 	return isAuthenticated;
