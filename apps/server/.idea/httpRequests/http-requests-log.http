@@ -13,6 +13,55 @@ Accept: */*
   "password": "12345678"
 }
 
+<> 2024-09-11T155224.201.json
+
+###
+
+GET http://localhost:3000/api/health
+User-Agent: IntelliJ HTTP Client/WebStorm 2024.1.5
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+content-length: 0
+
+<> 2024-09-11T155221.200.json
+
+###
+
+GET http://localhost:3000/api/health
+User-Agent: IntelliJ HTTP Client/WebStorm 2024.1.5
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+content-length: 0
+
+<> 2024-09-11T155217.200.json
+
+###
+
+GET http://localhost:3000/api/health
+User-Agent: IntelliJ HTTP Client/WebStorm 2024.1.5
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+content-length: 0
+
+<> 2024-09-11T155212.200.json
+
+###
+
+POST http://localhost:3000/api/auth/register
+Content-Type: application/json
+Content-Length: 161
+User-Agent: IntelliJ HTTP Client/WebStorm 2024.1.5
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+{
+  "fullName": "john doe",
+  "email": "carlos@gmail.com",
+  "username": "carlos_123",
+  "id": "f6e08c84-e07e-4585-9805-faea78bbf080",
+  "password": "12345678"
+}
+
 <> 2024-09-11T145512.201.json
 
 ###

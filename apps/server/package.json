@@ -4,10 +4,6 @@
 	"main": "index.js",
 	"scripts": {
 		"test": "vitest run",
-		"build:tsc": "tsc -p tsconfig.prod.json",
-		"build:clean": "rm -r dist; exit 0",
-		"build": "npm run build:clean && npm run build:tsc",
-		"start": "NODE_ENV=production node dist/src/start",
 		"dev": "ts-node-dev ./src/start.ts"
 	},
 	"keywords": [],
