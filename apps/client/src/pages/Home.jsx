@@ -49,7 +49,9 @@ function Home() {
 				<h2 className="text-3xl text-center font-medium">
 					¿Estas listo para salvar el planeta?
 				</h2>
-				<button className="btn bg-green-100 w-1/2">Comienza a ahora</button>
+				<button className="btn bg-green-100 w-1/2" onClick={handleStart}>
+					Comienza a ahora
+				</button>
 			</section>
 
 			{/* footer section */}
