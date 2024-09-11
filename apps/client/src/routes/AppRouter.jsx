@@ -5,6 +5,7 @@ import { createBrowserRouter, RouterProvider, Route, Link } from "react-router-d
 import Home from "../pages/Home";
 import Login from "../pages/Login";
 import Register from "../pages/Register";
+import Game from "../pages/Game";
 
 const router = createBrowserRouter([
 	{
@@ -18,6 +19,10 @@ const router = createBrowserRouter([
 	{
 		path: "/register",
 		element: <Register />,
+	},
+	{
+		path: "/game",
+		element: <Game />,
 	},
 ]);
 

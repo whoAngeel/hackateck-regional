@@ -1,7 +1,20 @@
 import React from "react";
 import Navbar from "../components/ui/Navbar";
+import { useNavigate } from "react-router-dom";
+import useAuth from "../utils/useAuth";
 
 function Home() {
+	const navigate = useNavigate();
+	const isAuthenticated = useAuth();
+	const handleStart = () => {
+		if (isAuthenticated) {
+			// Si el usuario está autenticado, lo envías al juego
+			navigate("/game");
+		} else {
+			// Si no está autenticado, lo envías al registro
+			navigate("/login");
+		}
+	};
 	return (
 		<div className="flex flex-col min-h-screen">
 			<Navbar />
@@ -15,7 +28,10 @@ function Home() {
 					Un emocionante juego sobre el cambio climático y la conservación
 					del medio ambiente
 				</h2>
-				<button className="mt-6 px-8 py-3 bg-green-500 text-white rounded-md hover:bg-green-600">
+				<button
+					onClick={handleStart}
+					className="mt-6 px-8 py-3 bg-green-500 text-white rounded-md hover:bg-green-600"
+				>
 					Comenzar
 				</button>
 			</div>

@@ -1,17 +1,35 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+import useAuth from "../../utils/useAuth";
 function Navbar() {
+	const navigate = useNavigate();
+	const isAuthenticated = useAuth();
+
+	const handleStart = () => {
+		if (isAuthenticated) {
+			// Si el usuario está autenticado, lo envías al juego
+			navigate("/game");
+		} else {
+			// Si no está autenticado, lo envías al registro
+			navigate("/login");
+		}
+	};
 	return (
 		<div className="navbar bg-primary text-white">
 			<div className="flex-1">
-				<a className="btn btn-ghost text-xl">Juego</a>
+				<a className="btn btn-ghost text-xl">GreenGuardian</a>
 			</div>
 			<div className="flex-none">
 				<div className="">
 					<Link>
-						<button className="btn btn-ghost btn-xs">Jugar</button>
+						<button
+							className="btn btn-ghost btn-xs"
+							onClick={handleStart}
+						>
+							Jugar
+						</button>
 					</Link>
-					<Link>
+					<Link to={"/register"}>
 						<button className="btn btn-ghost btn-xs">Registrarse</button>
 					</Link>
 					<Link>
