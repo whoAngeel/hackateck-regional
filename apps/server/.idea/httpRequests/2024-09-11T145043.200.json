@@ -1,0 +1,9 @@
+{
+  "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImY2ZTA4Yzg0LWUwN2UtNDU4NS05ODA1LWZhZWE3OGJiZjA4MCIsImZ1bGxOYW1lIjoiam9obiBkb2UiLCJlbWFpbCI6ImNhcmxvc0BnbWFpbC5jb20iLCJ1c2VybmFtZSI6ImNhcmxvc18xMjMiLCJpYXQiOjE3MjYwODc4NDN9.D1nua0BhSMaNQ2feKebojZPZtxFOar7ihdpORo1Xv4k",
+  "user": {
+    "id": "f6e08c84-e07e-4585-9805-faea78bbf080",
+    "fullName": "john doe",
+    "email": "carlos@gmail.com",
+    "username": "carlos_123"
+  }
+}
