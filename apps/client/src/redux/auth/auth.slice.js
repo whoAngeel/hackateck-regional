@@ -18,6 +18,7 @@ export const loginAuth = createAsyncThunk(
 			Cookie.set("token", response.data.token);
 			return response.data;
 		} catch (error) {
+			console.log(error.response.data);
 			return rejectWithValue(error.response.data);
 		}
 	}
@@ -28,10 +29,11 @@ export const registerAuth = createAsyncThunk(
 	async (registerData, { rejectWithValue }) => {
 		try {
 			const response = await axios.post("/api/auth/register", registerData);
-
+			Cookie.set("token", response.data.token);
 			console.log("SLICE REGISTER", response.data);
 			return response.data;
 		} catch (error) {
+			console.log(error.response.data);
 			return rejectWithValue(error.response.data);
 		}
 	}
@@ -46,6 +48,9 @@ export const authSlice = createSlice({
 			state.token = null;
 			state.user = null;
 			state.isLoading = false;
+			state.error = null;
+		},
+		clearError: (state) => {
 			state.error = null;
 		},
 	},
@@ -64,10 +69,23 @@ export const authSlice = createSlice({
 			.addCase(loginAuth.rejected, (state, action) => {
 				state.isLoading = false;
 				state.error = action.payload;
-				message.error("Credenciales incorrectas");
+			})
+			.addCase(registerAuth.pending, (state) => {
+				state.isLoading = true;
+				state.error = null;
+			})
+			.addCase(registerAuth.fulfilled, (state, action) => {
+				state.isLoading = false;
+				state.token = action.payload.token;
+				state.user = action.payload.user;
+				state.error = null;
+			})
+			.addCase(registerAuth.rejected, (state, action) => {
+				state.isLoading = false;
+				state.error = action.payload;
 			});
 	},
 });
 
-export const { logout } = authSlice.actions;
+export const { logout, clearError } = authSlice.actions;
 export default authSlice.reducer;

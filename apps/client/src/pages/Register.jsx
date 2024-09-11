@@ -1,18 +1,26 @@
-import { Button, Form, Input } from "antd";
+import { Button, Form, Input, message } from "antd";
 import React from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { Link, useNavigate } from "react-router-dom";
-import { registerAuth } from "../redux/auth/auth.slice";
+import { clearError, registerAuth } from "../redux/auth/auth.slice";
 import Cookie from "js-cookie";
 function Register() {
 	const [form] = Form.useForm();
 	const [clientReady, setClientReady] = React.useState(false);
 	const dispatch = useDispatch();
 	const navigate = useNavigate();
-	const { isLoading, token } = useSelector((state) => state.auth);
+	const { isLoading, token, error } = useSelector((state) => state.auth);
+	const [messageApi, contextHolder] = message.useMessage();
 	function onFinish(values) {
 		dispatch(registerAuth(values));
 	}
+
+	React.useEffect(() => {
+		if (error) {
+			messageApi.error("Error al registrar usuario");
+			dispatch(clearError());
+		}
+	}, [error, dispatch, messageApi]);
 
 	React.useEffect(() => {
 		setClientReady(true);
@@ -26,6 +34,7 @@ function Register() {
 
 	return (
 		<div className="flex items-center justify-center min-h-screen bg-base-200">
+			{contextHolder}
 			<Form
 				onFinish={onFinish}
 				form={form}
@@ -45,26 +54,27 @@ function Register() {
 					<Input.Password placeholder="***********" />
 				</Form.Item>
 				<Form.Item shouldUpdate>
-					()=>(
-					<Button
-						type="primary"
-						block
-						htmlType="submit"
-						disabled={
-							!clientReady ||
-							!form.isFieldsTouched(true) ||
-							!!form
-								.getFieldsError()
-								.filter(({ errors }) => errors.length).length
-						}
-					>
-						{isLoading ? (
-							<span>Ingresando...</span>
-						) : (
-							<span>Ingresar</span>
-						)}
-					</Button>
-					)
+					{() => (
+						<Button
+							type="primary"
+							block
+							htmlType="submit"
+							loading={isLoading}
+							disabled={
+								!clientReady ||
+								!form.isFieldsTouched(true) ||
+								!!form
+									.getFieldsError()
+									.filter(({ errors }) => errors.length).length
+							}
+						>
+							{isLoading ? (
+								<span>Registrando...</span>
+							) : (
+								<span>Registrar</span>
+							)}
+						</Button>
+					)}
 				</Form.Item>
 				<div>
 					<p>
