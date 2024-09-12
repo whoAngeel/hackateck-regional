@@ -8,7 +8,9 @@ function GameLayout() {
 			<div className="fixed top-0 right-0 my-4 mr-4 z-10">
 				<AvatarMenu />
 			</div>
-			<Outlet />
+			<div className="flex-1">
+				<Outlet />
+			</div>
 		</div>
 	);
 }
