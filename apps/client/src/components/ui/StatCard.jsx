@@ -4,11 +4,13 @@ import icon from "../../constants/icon";
 
 function StatCard() {
 	return (
-		<div className=" bg-primary-500 w-3/12 sm:w-3/12 rounded-xl p-1 text-center fixed z-10">
-			<p className="text-white font-semibold text-center">Estadisticas</p>
-			<div className="w-full flex justify-center flex-col items-center">
+		<div className=" bg-primary-500">
+			<p className="text-white font-semibold text-xl text-center">Estadisticas</p>
+			<div className="w-full flex justify-start flex-col pl-2 mt-5">
 				<Stat name="Dias" icon={icon.latido} cifra="2" />
-				<Stat name="Dias" icon={icon.plantado} cifra="2" />
+				<Stat name="Co2" icon={icon.plantado} cifra="2" />
+				<Stat name="Esperanza de vida" icon={icon.cronometro} cifra="2000 años" />
+				<Stat name="Temperatura" icon={icon.temperatura} cifra="2 C" />
 			</div>
 		</div>
 	);
