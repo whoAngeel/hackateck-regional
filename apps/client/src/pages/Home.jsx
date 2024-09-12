@@ -1,105 +1,143 @@
-import React, { useEffect } from "react";
 import Navbar from "../components/ui/Navbar";
-import { useNavigate } from "react-router-dom";
+import {useNavigate} from "react-router-dom";
 import useAuth from "../utils/useAuth";
-import { logout } from "../redux/auth/auth.slice";
-import { useDispatch } from "react-redux";
+import backgroundImage from "../assets/images/bg-hero.jpg"
+import friendsImage from "../assets/images/friends.svg"
+import foundingImage from "../assets/images/investor.svg"
+import projectImage from "../assets/images/project.svg"
+import energyImage from "../assets/images/energy.svg"
+
+const Footer = () => {
+    return (
+        <footer className="bg-primary-900 text-white py-8 w-full flex flex-col items-center">
+            <div className="flex flex-col items-center space-y-4">
+                <p className="text-lg font-semibold">EnerGreen © 2024</p>
+                <p className="text-sm">Todos los derechos reservados.</p>
+                <div className="flex space-x-6 sm:mx-3">
+                    <a href="#" className="hover:underline">Términos de Servicio</a>
+                    <a href="#" className="hover:underline">Política de Privacidad</a>
+                    <a href="#" className="hover:underline">Contacto</a>
+                </div>
+            </div>
+        </footer>
+    );
+};
+
 
 function Home() {
-	const navigate = useNavigate();
-	const isAuthenticated = useAuth();
-	const dispatch = useDispatch();
-	const handleStart = () => {
-		if (isAuthenticated) {
-			// Si el usuario está autenticado, lo envías al juego
-			navigate("/game");
-		} else {
-			// Si no está autenticado, lo envías al registro
-			navigate("/login");
-		}
-	};
-	// useEffect(() => {
-	// 	dispatch(logout());
-	// }, []);
-	return (
-		<div className="flex flex-col min-h-screen">
-			<Navbar />
+    const navigate = useNavigate();
+    const isAuthenticated = useAuth();
+    const handleStart = () => {
+        if (isAuthenticated) {
+            navigate("/game");
+        } else {
+            navigate("/login");
+        }
+    };
 
-			{/* Hero section */}
-			<div className="flex-1  flex flex-col items-center justify-center bg-base-50 bg-hero-pattern bg-cover bg-center text-center  min-h-screen p-4">
-				<h1 className="text-4xl font-bold ">
-					Salva el planeta con GreenGuardian
-				</h1>
-				<h2 className="text-lg  mt-4">
-					Un emocionante juego sobre el cambio climático y la conservación
-					del medio ambiente
-				</h2>
-				<button
-					onClick={handleStart}
-					className="mt-6 px-8 py-3 bg-primary-500 text-white rounded-md hover:bg-secondary-600"
-				>
-					Comenzar
-				</button>
-			</div>
+    let div = <>
+        <div className="flex flex-col">
+            <section className="flex flex-col h-screen w-full bg-cover bg-no-repeat"
+                     style={{backgroundImage: `url(${backgroundImage})`}}>
+                <div className="bg-black/50">
+                    <Navbar/>
+                    <div
+                        className=" flex-1 flex flex-col items-center justify-center bg-transparent bg-cover bg-center text-center text-white min-h-screen p-4">
+                        <h1 className="text-4xl font-bold ">
+                            Salva el planeta con EnerGreen
+                        </h1>
+                        <h2 className="text-lg  mt-4">
+                            Un emocionante juego sobre el cambio climático y la concientización
+                            del medio ambiente
+                        </h2>
+                        <button
+                            onClick={handleStart}
+                            className="mt-6 px-8 py-3 bg-primary-500 text-white rounded-md hover:bg-secondary-600"
+                        >
+                            Comenzar
+                        </button>
+                    </div>
+                </div>
+            </section>
 
-			{/* caracteristicas section */}
+            <section className="flex flex-col justify-around min-h-screen w-full bg-primary-700 py-2">
+                <img src={energyImage} alt="EnerGreen Logo" className="w-full h-64 object-cover rounded-lg shadow-lg"/>
+                <div className="px-4 text-white">
+                    <h1 className="text-5xl font-bold mb-6">¿Qué es EnerGreen?</h1>
+                    <p className="text-lg text-justify">
+                        EnerGreen es una plataforma educativa que tiene como objetivo crear conciencia sobre el cambio
+                        climático. A través de experiencias interactivas, queremos que personas de todas las edades se
+                        conviertan en defensores del planeta.
+                    </p>
+                </div>
+            </section>
 
-			<section className="bg-info-700  py-12">
-				<h2 className="text-3xl text-center font-medium">
-					{" "}
-					Caracteristicas del juego
-				</h2>
-			</section>
+            <section className="flex flex-col justify-around min-h-screen w-full bg-white py-2">
 
-			<section className="bg-primary-500 py-40 text-slate-100 flex flex-col justify-center items-center gap-4 ">
-				<h2 className="text-3xl text-center font-medium">
-					¿Estas listo para salvar el planeta?
-				</h2>
-				<div>
-					<button
-						className="btn btn-wide bg-secondary-500 hover:bg-secondary-600 text-slate-900 "
-						onClick={handleStart}
-					>
-						Comienza a ahora
-					</button>
-				</div>
-			</section>
+                <div className="px-4 text-primary-800">
+                    <h1 className="text-5xl font-bold mb-6">Guardianes del Planeta</h1>
+                    <p className="text-lg text-justify">
+                        Un juego interactivo donde los jugadores completan quizes y trivias sobre el medio ambiente para
+                        ganar puntos. Estos puntos se usan para cuidar una mascota virtual: un planeta Tierra. Además,
+                        puedes invitar a tus amigos para mantener juntos al planeta sano y fuerte.
+                    </p>
+                </div>
 
-			{/* footer section */}
-			<div className="relative">
-				<svg
-					xmlns="http://www.w3.org/2000/svg"
-					viewBox="0 0 1440 320"
-					className="absolute bottom-0 left-0 w-full "
-				>
-					<path
-						fill="#0C3C34"
-						className="fill-bg-primary-900"
-						fillOpacity="1"
-						d="M0,224L80,202.7C160,181,320,139,480,138.7C640,139,800,181,960,197.3C1120,213,1280,203,1360,197.3L1440,192L1440,320L1360,320C1280,320,1120,320,960,320C800,320,640,320,480,320C320,320,160,320,80,320L0,320Z"
-					></path>
-				</svg>
+                <img src={friendsImage} alt="Guardianes del planeta"
+                     className="w-full h-64 object-cover rounded-lg shadow-lg"/>
+            </section>
 
-				<footer className="bg-primary-800 text-slate-100 py-4 text-center text-xs relative z-10">
-					<div>
-						<p>
-							&copy; {new Date().getFullYear()} 5T. Todos los derechos
-							reservados.
-						</p>
-						<div className="mt-4">
-							<a href="#" className="hover:underline">
-								Política de privacidad
-							</a>{" "}
-							|{" "}
-							<a href="#" className="hover:underline">
-								Términos de servicio
-							</a>
-						</div>
-					</div>
-				</footer>
-			</div>
-		</div>
-	);
+            <section className="flex sm:flex-col h-screen w-full bg-primary-600 text-white">
+                <div className="flex items-center justify-center p-8">
+                    <img src={foundingImage} alt="EcoFound"
+                         className="ml-8"/>
+                </div>
+                <div className="flex flex-col items-center justify-center text-center p-8">
+                    <h1 className="text-4xl font-bold mb-6">EcoFound</h1>
+                    <p className="text-lg">
+                        EcoFound es nuestra plataforma de crowdfunding, diseñada para apoyar proyectos de energía
+                        renovable. A través de donaciones y financiamiento colectivo, podemos impulsar iniciativas que
+                        ayudarán a crear un futuro más verde y sostenible.
+                    </p>
+                </div>
+            </section>
+
+            <section className="flex sm:flex-col lg:flex-row h-screen w-full bg-gray-100 text-primary-800">
+                <div className="flex flex-col items-center justify-center text-center p-8">
+                    <h1 className="text-4xl font-bold mb-6">EcoEduca</h1>
+                    <p className="text-lg">
+                        Una plataforma educativa enfocada en niños y jóvenes, donde pueden aprender sobre el cambio
+                        climático a través de cursos interactivos y proyectos prácticos. ¡Es el lugar perfecto para
+                        aquellos que desean ser parte de la próxima generación de defensores del planeta!
+                    </p>
+                </div>
+                <div className="flex items-center justify-center p-8">
+                    <img src={projectImage} alt="EcoEduca"
+                    />
+                </div>
+            </section>
+
+            <section className="flex flex-col h-screen w-full bg-primary-500">
+                <div className="flex-1 flex flex-col items-center justify-center text-center text-white p-8">
+                    <h1 className="text-5xl font-bold mb-6">Únete a la Revolución Verde</h1>
+                    <p className="text-lg mb-6">
+                        Con EnerGreen, puedes aprender, jugar y contribuir a un futuro más sostenible. ¡Únete a nuestra
+                        plataforma y sé parte del cambio!
+                    </p>
+                    <button
+                        onClick={handleStart}
+                        className="mt-6 px-8 py-3 bg-primary-700 text-white rounded-md hover:bg-secondary-600"
+                    >
+                        Comenzar
+                    </button>
+                </div>
+            </section>
+
+
+            <Footer></Footer>
+        </div>
+    </>;
+    return div;
 }
 
 export default Home;

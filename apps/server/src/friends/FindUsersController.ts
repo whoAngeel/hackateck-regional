@@ -10,7 +10,7 @@ type FindUsersRequest = {
     email: string | undefined;
 };
 
-export class    FindUsersController extends Controller {
+export class FindUsersController extends Controller {
     async run(req: Request<FindUsersRequest>, res: Response) {
         const response = await this.findUsers(req);
         if (response instanceof ProblemDetails) {
