@@ -39,7 +39,6 @@ const ResponsiveCamera = () => {
 
 	return null; // No necesita renderizar nada
 };
-s;
 
 function MainPC({ setTitulo }) {
 	const navigate = useNavigate();
