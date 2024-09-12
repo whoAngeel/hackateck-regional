@@ -12,6 +12,7 @@ import Logout from "../pages/Logout";
 import LayoutFunding from "../pages/crowdfunding/Layout.jsx";
 import IndexCrowdFunding from "../pages/crowdfunding/Index";
 import AllFunding from "../pages/crowdfunding/All";
+import StartNowFunding from "../pages/crowdfunding/StartNow.jsx";
 import Trivia from "../pages/trivia/Trivia.jsx";
 
 const router = createBrowserRouter([
