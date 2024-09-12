@@ -21,11 +21,15 @@ function AvatarMenu() {
 		},
 		{
 			key: "3",
+			label: <Link to={"/game"}>Juego</Link>,
+		},
+		{
+			key: "4",
 			label: <Link to={"/crowdfunding"}>Fondeo Colectivo</Link>,
 		},
 
 		{
-			key: "4",
+			key: "5",
 			danger: true,
 			label: <Link to={"/logout"}>Cerrar sesión</Link>,
 		},
