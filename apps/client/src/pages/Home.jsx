@@ -51,7 +51,7 @@ function Home() {
 				</h2>
 			</section>
 
-			<section className="bg-primary-500 py-12 text-slate-100 flex flex-col justify-center items-center gap-4">
+			<section className="bg-primary-500 py-40 text-slate-100 flex flex-col justify-center items-center gap-4 ">
 				<h2 className="text-3xl text-center font-medium">
 					¿Estas listo para salvar el planeta?
 				</h2>
@@ -66,23 +66,38 @@ function Home() {
 			</section>
 
 			{/* footer section */}
-			<footer className="bg-neutral-700 text-neutral-content  py-4 text-center text-xs">
-				<div>
-					<p>
-						&copy; {new Date().getFullYear()} 5T. Todos los derechos
-						reservados.
-					</p>
-					<div className="mt-4">
-						<a href="#" className="hover:underline">
-							Política de privacidad
-						</a>{" "}
-						|{" "}
-						<a href="#" className="hover:underline">
-							Términos de servicio
-						</a>
+			<div className="relative">
+				<svg
+					xmlns="http://www.w3.org/2000/svg"
+					viewBox="0 0 1440 320"
+					className="absolute bottom-0 left-0 w-full "
+				>
+					<path
+						fill="#0C3C34"
+						className="fill-bg-primary-900"
+						fillOpacity="1"
+						d="M0,224L80,202.7C160,181,320,139,480,138.7C640,139,800,181,960,197.3C1120,213,1280,203,1360,197.3L1440,192L1440,320L1360,320C1280,320,1120,320,960,320C800,320,640,320,480,320C320,320,160,320,80,320L0,320Z"
+					></path>
+				</svg>
+
+				<footer className="bg-primary-800 text-slate-100 py-4 text-center text-xs relative z-10">
+					<div>
+						<p>
+							&copy; {new Date().getFullYear()} 5T. Todos los derechos
+							reservados.
+						</p>
+						<div className="mt-4">
+							<a href="#" className="hover:underline">
+								Política de privacidad
+							</a>{" "}
+							|{" "}
+							<a href="#" className="hover:underline">
+								Términos de servicio
+							</a>
+						</div>
 					</div>
-				</div>
-			</footer>
+				</footer>
+			</div>
 		</div>
 	);
 }
