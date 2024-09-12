@@ -70,7 +70,7 @@ export default function Model(props) {
                 {showTooltip2 && (
                   <Html position={[0, 10, 0]} center>
                     <div className="tooltip" data-tip="hello">
-                      <button className="btn">Amado Puto</button>
+                      <button className="btn">Reduce, reutiliza, recicla</button>
                     </div>
                   </Html>
                 )}
@@ -98,7 +98,7 @@ export default function Model(props) {
                 {showTooltip3 && (
                   <Html position={[0, 10, 0]} center>
                     <div className="tooltip" data-tip="hello">
-                      <button className="btn">Angel Puto</button>
+                      <button className="btn">Reduce, reutiliza, recicla</button>
                     </div>
                   </Html>
                 )}
@@ -154,7 +154,7 @@ export default function Model(props) {
                 {showTooltip4 && (
                   <Html position={[0, 10, 0]} center>
                     <div className="tooltip" data-tip="hello">
-                      <button className="btn">Ronaldo Puto</button>
+                      <button className="btn">Reduce, reutiliza, recicla</button>
                     </div>
                   </Html>
                 )}
@@ -203,7 +203,7 @@ export default function Model(props) {
                 {showTooltip && (
                   <Html position={[0, 10, 0]} center>
                     <div className="tooltip" data-tip="hello">
-                      <button className="btn">Carlos Puto</button>
+                      <button className="btn">Reduce, reutiliza, recicla</button>
                     </div>
                   </Html>
                 )}

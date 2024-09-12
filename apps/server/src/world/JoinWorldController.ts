@@ -27,8 +27,7 @@ export class JoinWorldController extends Controller {
         const response = await this.joinWorld(req);
 
         if (response instanceof ProblemDetails) {
-            res.status(response.status).json(response.toJson());
-        } else {
+            res.status(response.status).json(response.toJson());        } else {
             res.status(httpStatus.OK).json(response);
         }
     }
