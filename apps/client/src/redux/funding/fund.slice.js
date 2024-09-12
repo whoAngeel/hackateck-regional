@@ -38,6 +38,15 @@ const initialFunds = [
 		image: "https://placehold.co/800x400",
 		category: "Electricidad",
 	},
+	{
+		id: 5,
+		name: "Pozo de agua",
+		description: "Paneles solares",
+		fundingGoal: 30000,
+		collected: 25000,
+		image: "https://placehold.co/900x300",
+		category: "Cambio climatico",
+	},
 ];
 
 const initialState = {

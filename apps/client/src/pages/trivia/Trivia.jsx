@@ -1,6 +1,8 @@
 import React from "react";
 import CardB from "../../components/ui/CardB";
 import calentamiento from "../../assets/images/calentamiento.jpg";
+import Juez from "../../assets/images/juez.jpg";
+import Energia from "../../assets/images/energia.png";
 function Trivia() {
   return (
     <>
@@ -16,14 +18,14 @@ function Trivia() {
           imagen={calentamiento}
         />
         <CardB
-          title=""
-          description="Toma las mejores dediciones y dale al planeta un respiro"
-          imagen={calentamiento}
+          title="Transicion e Energias Renovables"
+          description="Tipos de energías renovables (solar, eólica, geotérmica, hidroeléctrica, biomasa)"
+          imagen={Energia}
         />
         <CardB
-          title="Calentamiento Global"
-          description="Toma las mejores dediciones y dale al planeta un respiro"
-          imagen={calentamiento}
+          title="Política y Regulación Climática:"
+          description="Regulaciones nacionales sobre emisiones de gases de efecto invernadero"
+          imagen={Juez}
         />
       </div>
     </>
