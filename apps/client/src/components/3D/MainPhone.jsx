@@ -19,6 +19,7 @@ import InviteFriendButton from "../ui/InviteFriendButton.jsx";
 import AvatarGroup from "../ui/AvatarGroup.jsx";
 import Trivia from "../../../public/trivia/Trivia";
 import Chart from "../../../public/chart/Chart.jsx";
+import { useNavigate } from "react-router-dom";
 
 const ResponsiveCamera = () => {
     const {camera, size} = useThree();
@@ -40,6 +41,7 @@ const ResponsiveCamera = () => {
 
 function MainPhone({ setTitulo }) {
   const [content, setContent] = useState(1);
+  const navigate = useNavigate();
   useEffect(() => {
     if (content == 1) setTitulo("Protege tu mundo");
     else if (content == 2) setTitulo("Trivias");
