@@ -17,6 +17,15 @@ function AvatarMenu() {
 		},
 		{
 			key: "2",
+			label: <Link to={"/"}>Inicio</Link>,
+		},
+		{
+			key: "3",
+			label: <Link to={"/crowdfunding"}>Fondeo Colectivo</Link>,
+		},
+
+		{
+			key: "4",
 			danger: true,
 			label: <Link to={"/logout"}>Cerrar sesión</Link>,
 		},
