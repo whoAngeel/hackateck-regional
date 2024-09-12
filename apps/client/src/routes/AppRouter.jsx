@@ -9,8 +9,9 @@ import Game from "../pages/game/Game";
 import GameLayout from "../pages/game/GameLayout";
 import ProtectedRoute from "../utils/ProtectedRoute";
 import Logout from "../pages/Logout";
-import { Layout } from "antd";
-import IndexCroudFunding from "../pages/crowdfunding/Index";
+import LayoutFunding from "../pages/crowdfunding/Layout.jsx";
+import IndexCrowdFunding from "../pages/crowdfunding/Index";
+import AllFunding from "../pages/crowdfunding/All";
 
 const router = createBrowserRouter([
 	{
@@ -24,6 +25,20 @@ const router = createBrowserRouter([
 	{
 		path: "/register",
 		element: <Register />,
+	},
+	{
+		path: "/crowdfunding",
+		element: <LayoutFunding />,
+		children: [
+			{
+				index: true,
+				element: <IndexCrowdFunding />,
+			},
+			{
+				path: "all",
+				element: <AllFunding />,
+			},
+		],
 	},
 	{
 		path: "/game",
@@ -43,16 +58,7 @@ const router = createBrowserRouter([
 		path: "/logout",
 		element: <Logout />,
 	},
-	{
-		path: "/crowdfunding",
-		element: <Layout />,
-		children: [
-			{
-				index: true,
-				element: <IndexCroudFunding />,
-			},
-		],
-	},
+
 	{
 		path: "*",
 		element: <Home />,
