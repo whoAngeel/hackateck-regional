@@ -62,8 +62,9 @@ export const fundSlice = createSlice({
 	reducers: {
 		createFund: (state, action) => {
 			const newFund = {
-				id: Date.now(),
+				id: initialFunds.length + 1,
 				image: "https://placehold.co/600x400",
+				collected: 0,
 				...action.payload,
 			}; // Genera un ID único
 			state.funds = [newFund, ...state.funds]; // Agrega al inicio
@@ -74,6 +75,13 @@ export const fundSlice = createSlice({
 		fetchFunds: (state) => {
 			state.isLoading = false;
 			state.error = null;
+		},
+		updateCollectedAmount: (state, action) => {
+			const { id, amount } = action.payload;
+			const fund = state.funds.find((fund) => fund.id === id);
+			if (fund) {
+				fund.collected += amount; // Sumar la cantidad recaudada
+			}
 		},
 		// Actualizar fondo
 		updateFund: (state, action) => {
@@ -98,5 +106,11 @@ export const fundSlice = createSlice({
 	},
 });
 
-export const { fetchFunds, deleteFund, updateFund, createFund } = fundSlice.actions;
+export const {
+	updateCollectedAmount,
+	fetchFunds,
+	deleteFund,
+	updateFund,
+	createFund,
+} = fundSlice.actions;
 export default fundSlice.reducer;

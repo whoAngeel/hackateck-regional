@@ -3,7 +3,7 @@ export default {
 	content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
 	theme: {
 		screens: {
-			"2xl": { max: "1535px" },
+			"custom-lg": "1024px",
 			// => @media (max-width: 1535px) { ... }
 
 			xl: { max: "1279px" },
@@ -19,8 +19,6 @@ export default {
 			// => @media (max-width: 639px) { ... }
 		},
 
-
-		
 		extend: {
 			colors: {
 				primary: {
@@ -142,7 +140,7 @@ export default {
 				pbold: ["Poppins-Bold", "sans-serif"],
 				pextrabold: ["Poppins-ExtraBold", "sans-serif"],
 				pblack: ["Poppins-Black", "sans-serif"],
-			  },
+			},
 		},
 	},
 	plugins: [require("daisyui")],

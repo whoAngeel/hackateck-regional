@@ -4,8 +4,11 @@ import { Button, Tooltip } from "antd";
 import { GoArrowLeft, GoHomeFill } from "react-icons/go";
 import { Link } from "react-router-dom";
 import { useSelector } from "react-redux";
+import ModalFund from "../../components/funding/ModalFund";
 
 function All() {
+	const [openModal, setOpenModal] = React.useState(false);
+	const [selectedFund, setSelectedFund] = React.useState(null);
 	const { funds } = useSelector((state) => state.funding);
 	return (
 		<div className="bg-base-200 min-h-screen">
@@ -25,9 +28,13 @@ function All() {
 				Todas las recaudaciones
 			</h1>
 
-			<div className="bg-base-200 w-10/12 mx-auto grid grid-cols-3 py-10 gap-6">
+			<div className="bg-base-200 w-10/12 mx-auto grid grid-cols-3 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 2xl:grid-cols-3 py-10 gap-6 gap-y-10 ">
 				{funds.map((fund) => (
 					<Card
+						onclick={() => {
+							setOpenModal(true);
+							setSelectedFund(fund);
+						}}
 						key={fund.id}
 						recaudado={fund.collected}
 						meta={fund.fundingGoal}
@@ -36,6 +43,13 @@ function All() {
 					/>
 				))}
 			</div>
+			{selectedFund && (
+				<ModalFund
+					open={openModal}
+					setOpen={setOpenModal}
+					fund={selectedFund}
+				/>
+			)}
 		</div>
 	);
 }
