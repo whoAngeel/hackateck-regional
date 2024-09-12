@@ -12,6 +12,7 @@ import icon from "./../../constants/icon";
 import StatCard from "../../components/ui/StatCard";
 import { Sprite, SpriteMaterial, TextureLoader } from "three";
 import Board from "../../../public/board/Board";
+import Arrow from "../../../public/arrow/Arrow";
 
 const ResponsiveCamera = () => {
   const { camera, size } = useThree();
@@ -101,6 +102,7 @@ function MainPhone() {
                 Temperatura: 2C
               </Text>
             </mesh>
+            
             <mesh position={[0,0.2,0]}>
               <EarthCartoon />
             </mesh>

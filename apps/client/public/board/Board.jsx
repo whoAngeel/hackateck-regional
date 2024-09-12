@@ -24,12 +24,12 @@ export default function Model(props) {
         <mesh geometry={nodes.Object_8.geometry} material={materials.Plastic} />
         <mesh geometry={nodes.Object_9.geometry} material={materials.Plastic2} />
         <mesh geometry={nodes.Object_10.geometry} material={materials.Plastic3} />
-        <mesh geometry={nodes.Object_11.geometry} material={materials.Plastic4} />
-        <mesh geometry={nodes.Object_12.geometry} material={materials.Plastic5} />
+        <mesh geometry={nodes.Object_11.geometry} material={materials.Plastic4}  />
+        <mesh geometry={nodes.Object_12.geometry} material={materials.Plastic5}  />
         <mesh geometry={nodes.Object_13.geometry} material={materials.Volume143} />
         <mesh geometry={nodes.Object_14.geometry} material={materials.Wood} />
         <mesh geometry={nodes.Object_15.geometry} material={materials.Wood} />
-        <mesh geometry={nodes.Object_16.geometry} material={materials.Wood} />
+        <mesh geometry={nodes.Object_16.geometry} material={materials.Wood}  />
       </group>
     </group>
   )

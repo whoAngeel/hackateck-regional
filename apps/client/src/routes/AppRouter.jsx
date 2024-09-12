@@ -12,6 +12,7 @@ import Logout from "../pages/Logout";
 import LayoutFunding from "../pages/crowdfunding/Layout.jsx";
 import IndexCrowdFunding from "../pages/crowdfunding/Index";
 import AllFunding from "../pages/crowdfunding/All";
+import Trivia from "../components/trivia/Trivia.jsx";
 
 const router = createBrowserRouter([
 	{
@@ -37,6 +38,16 @@ const router = createBrowserRouter([
 			{
 				path: "all",
 				element: <AllFunding />,
+			},
+		],
+	},
+	{
+		path: "/trivia",
+		element: <Trivia />,
+		children: [
+			{
+				index: true,
+				element: <Trivia />,
 			},
 		],
 	},

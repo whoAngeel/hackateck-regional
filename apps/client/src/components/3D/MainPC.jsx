@@ -12,6 +12,10 @@ import Stat from "./../../components/Stat";
 import icon from "./../../constants/icon";
 import StatCard from "../../components/ui/StatCard";
 import { Sprite, SpriteMaterial, TextureLoader } from "three";
+import Arrow from "../../../public/arrow/Arrow";
+import Trivia from "../../../public/trivia/Trivia";
+import { useNavigate } from "react-router-dom";
+
 
 const ResponsiveCamera = () => {
   const { camera, size } = useThree();
@@ -32,6 +36,8 @@ const ResponsiveCamera = () => {
 };
 
 function MainPC() {
+  const navigate = useNavigate();
+  const [content, setContent] = useState(1);
   return (
     <div className="flex flex-row md:flex-col home  bg-black" id="home">
       <div className="w-full mx-auto md:mt-[-150px]">
@@ -41,67 +47,106 @@ function MainPC() {
           <OrbitControls enableZoom={false} />
 
           <Suspense fallback={null}>
-            <mesh scale={[0.002, 0.002, 0.002]} position={[-2, -0.7, 0]}>
-              <Board />
-            </mesh>
-            <mesh position={[-1.5, 0.4, 0]}>
-              {/* Texto dentro de la malla */}
-              <boxGeometry args={[0.82,1,0.01]}
-              />
-              <meshStandardMaterial color={"#38ad30"}/>
-              <Text
-                position={[0, 0.4, 0.008]} // Ajusta la posición del texto en la malla
-                fontSize={0.07} // Tamaño del texto
-                color="#ffffff" // Color del texto
-                anchorX="center" // Alineación horizontal
-                anchorY="middle" // Alineación vertical
-                fontWeight="bold"
-              >
-                Estadisticas
-              </Text>
+            {content == 1 && (
+              <group>
+                <mesh scale={[0.002, 0.002, 0.002]} position={[-2, -0.7, 0]}>
+                  <Board />
+                </mesh>
+                <mesh position={[-1.5, 0.4, 0]}>
+                  {/* Texto dentro de la malla */}
+                  <boxGeometry args={[0.82, 1, 0.01]} />
+                  <meshStandardMaterial color={"#38ad30"} />
+                  <Text
+                    position={[0, 0.4, 0.008]} // Ajusta la posición del texto en la malla
+                    fontSize={0.07} // Tamaño del texto
+                    color="#ffffff" // Color del texto
+                    anchorX="center" // Alineación horizontal
+                    anchorY="middle" // Alineación vertical
+                    fontWeight="bold"
+                  >
+                    Estadisticas
+                  </Text>
 
-              <Text
-                position={[0, 0.2, 0.008]} // Ajusta la posición del texto en la malla
-                fontSize={0.06} // Tamaño del texto
-                color="#ffffff" // Color del texto
-                anchorX="center" // Alineación horizontal
-                anchorY="middle" // Alineación vertical
-                fontWeight="bold"
-              >
-                Dias: 2
-              </Text>
-              <Text
-                position={[0, 0.1, 0.008]} // Ajusta la posición del texto en la malla
-                fontSize={0.06} // Tamaño del texto
-                color="#ffffff" // Color del texto
-                anchorX="center" // Alineación horizontal
-                anchorY="middle" // Alineación vertical
-                fontWeight="bold"
-              >
-                Co2: 2
-              </Text>
-              <Text
-                position={[0, 0, 0.008]} // Ajusta la posición del texto en la malla
-                fontSize={0.06} // Tamaño del texto
-                color="#ffffff" // Color del texto
-                anchorX="center" // Alineación horizontal
-                anchorY="middle" // Alineación vertical
-                fontWeight="bold"
-              >
-                Esperanza de vida: 2
-              </Text>
-              <Text
-                position={[0, -0.1, 0.008]} // Ajusta la posición del texto en la malla
-                fontSize={0.06} // Tamaño del texto
-                color="#ffffff" // Color del texto
-                anchorX="center" // Alineación horizontal
-                anchorY="middle" // Alineación vertical
-                fontWeight="bold"
-              >
-                Temperatura: 2C
-              </Text>
+                  <Text
+                    position={[0, 0.2, 0.008]} // Ajusta la posición del texto en la malla
+                    fontSize={0.06} // Tamaño del texto
+                    color="#ffffff" // Color del texto
+                    anchorX="center" // Alineación horizontal
+                    anchorY="middle" // Alineación vertical
+                    fontWeight="bold"
+                  >
+                    Dias: 2
+                  </Text>
+                  <Text
+                    position={[0, 0.1, 0.008]} // Ajusta la posición del texto en la malla
+                    fontSize={0.06} // Tamaño del texto
+                    color="#ffffff" // Color del texto
+                    anchorX="center" // Alineación horizontal
+                    anchorY="middle" // Alineación vertical
+                    fontWeight="bold"
+                  >
+                    Co2: 2
+                  </Text>
+                  <Text
+                    position={[0, 0, 0.008]} // Ajusta la posición del texto en la malla
+                    fontSize={0.06} // Tamaño del texto
+                    color="#ffffff" // Color del texto
+                    anchorX="center" // Alineación horizontal
+                    anchorY="middle" // Alineación vertical
+                    fontWeight="bold"
+                  >
+                    Esperanza de vida: 2
+                  </Text>
+                  <Text
+                    position={[0, -0.1, 0.008]} // Ajusta la posición del texto en la malla
+                    fontSize={0.06} // Tamaño del texto
+                    color="#ffffff" // Color del texto
+                    anchorX="center" // Alineación horizontal
+                    anchorY="middle" // Alineación vertical
+                    fontWeight="bold"
+                  >
+                    Temperatura: 2C
+                  </Text>
+                </mesh>
+              </group>
+            )}
+            {content == 2 && (
+            <mesh position={[-1.58, -0.7, 0]} scale={[12,12,12]} rotation={[0, - Math.PI / 2, 0]}
+            onClick={() => {
+              navigate("/trivia");
+            }}>
+              <Trivia />
             </mesh>
-            <mesh position={[0.7,0,0]}>
+            )}
+            <mesh
+              position={[-0.8, 0, 0]}
+              scale={[0.13, 0.13, 0.13]}
+              rotation={[0, 0, Math.PI / 2]}
+              onClick={() => {
+                if (content > 1) setContent(1)
+                else setContent(content + 1);
+                console.log(content)
+              }}
+              onPointerOver={(e) => (e.object.cursor = 'pointer')}
+              onPointerOut={(e) => (e.object.cursor = 'auto')}
+            >
+              <Arrow />
+            </mesh>
+            <mesh
+              position={[-2.2, 0, 0]}
+              scale={[0.13, 0.13, 0.13]}
+              rotation={[0, 0, -Math.PI / 2]}
+              onClick={() => {
+
+                if (content < 2) setContent(2);
+                else setContent(content - 1);
+              }}
+              onPointerOver={(e) => (e.object.cursor = 'pointer')}
+              onPointerOut={(e) => (e.object.cursor = 'auto')}
+            >
+              <Arrow />
+            </mesh>
+            <mesh position={[0.7, 0, 0]}>
               <EarthCartoon />
             </mesh>
           </Suspense>
