@@ -8,6 +8,7 @@ import Register from "../pages/Register";
 import Game from "../pages/game/Game";
 import GameLayout from "../pages/game/GameLayout";
 import ProtectedRoute from "../utils/ProtectedRoute";
+import Logout from "../pages/Logout";
 
 const router = createBrowserRouter([
 	{
@@ -35,6 +36,14 @@ const router = createBrowserRouter([
 				element: <Game />,
 			},
 		],
+	},
+	{
+		path: "/logout",
+		element: <Logout />,
+	},
+	{
+		path: "*",
+		element: <Home />,
 	},
 ]);
 
