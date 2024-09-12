@@ -43,6 +43,7 @@ const ResponsiveCamera = () => {
 function MainPC({setTitulo}) {
     const navigate = useNavigate();
     const [content, setContent] = useState(1);
+<<<<<<< Updated upstream
     useEffect(() => {
         if(content == 1) setTitulo("Hackatec2024")
         else if(content == 2)setTitulo("Trivia");
@@ -52,15 +53,16 @@ function MainPC({setTitulo}) {
     const [title, setTitle] = useState("Hackatec2024");
         const {user} = useSelector((state) => state.auth);
        
+=======
+    const {user} = useSelector((state) => state.auth);
+>>>>>>> Stashed changes
     return (
         <div className="flex flex-row md:flex-col home  bg-black" id="home">
             <div
-                className="p-4 bg-gray-400 rounded-md bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-10 border border-gray-100 flex-col flex gap-4 justify-center absolute left-32 top-5">
+                className="p-4 bg-gray-400 rounded-md bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-10 border border-gray-100 flex-col flex gap-4 justify-center absolute left-32 top-4">
                 <h2 className="text-gray-300 font-bold">Guardianes de este planeta</h2>
-                <div className="flex gap-4 items-center w-full">
-                
-				<AvatarGroup />
-			
+                <div className="flex gap-4 items-center w-full z-99">
+                    <AvatarGroup/>
                     <InviteFriendButton/>
                 </div>
             </div>

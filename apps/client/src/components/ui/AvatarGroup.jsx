@@ -2,9 +2,6 @@ import React from 'react';
 import { AntDesignOutlined, UserOutlined } from '@ant-design/icons';
 import { Avatar, Divider, Tooltip } from 'antd';
 const AvatarGroup = () => (
-  
-    
-    
     <Avatar.Group
       size="large"
       max={{
