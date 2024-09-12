@@ -19,6 +19,7 @@ import {useNavigate} from "react-router-dom";
 import {Avatar} from "antd";
 import {useSelector} from "react-redux";
 import InviteFriendButton from "../ui/InviteFriendButton.jsx";
+import AvatarGroup from "../ui/AvatarGroup.jsx";
 
 const ResponsiveCamera = () => {
     const {camera, size} = useThree();
@@ -48,12 +49,9 @@ function MainPC() {
                 className="p-4 bg-gray-400 rounded-md bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-10 border border-gray-100 flex-col flex gap-4 justify-center absolute left-32 top-5">
                 <h2 className="text-gray-300 font-bold">Guardianes de este planeta</h2>
                 <div className="flex gap-4 items-center w-full">
-                    <Avatar size="small" className="cursor-pointer bg-green-300 min-w-fit">
-                        {user.fullName[0]}
-                    </Avatar>
-                    <Avatar size="small" className="cursor-pointer bg-rose-300">
-                        {user.fullName[1].toUpperCase()}
-                    </Avatar>
+                
+				<AvatarGroup />
+			
                     <InviteFriendButton/>
                 </div>
             </div>
