@@ -7,7 +7,7 @@ function Index() {
 		<>
 			<section className="bg-gradient-to-r from-green-400 to-blue-500 min-h-screen flex items-center justify-center">
 				<div className="text-center text-white ">
-					<h1 className="text-5xl font-bold mb-4">Bienvenido a EcoFund</h1>
+					<h1 className="text-4xl md:text-5xl font-bold mb-4">Bienvenido a EcoFund</h1>
 					<p className="text-xl mb-6">Inicia una recaudacion</p>
 					<Link
 						to={"startnow"}

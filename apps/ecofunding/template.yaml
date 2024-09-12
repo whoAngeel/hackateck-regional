@@ -55,7 +55,7 @@ Resources:
                 - x86_64
             MemorySize: 128
             Timeout: 100
-            Description: "Create project"
+            Description: "Create project desc"
             Policies:
                 - DynamoDBCrudPolicy:
                       TableName: !Ref ProjectTable

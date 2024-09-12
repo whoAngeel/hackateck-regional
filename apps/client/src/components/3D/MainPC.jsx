@@ -45,6 +45,7 @@ function MainPC({setTitulo}) {
     const navigate = useNavigate();
     const [content, setContent] = useState(1);
     useEffect(() => {
+<<<<<<< HEAD
         if(content == 1) setTitulo("Protege tu mundo")
         else if(content == 2)setTitulo("Trivias");
         else if(content == 3)setTitulo("Crowdfunding")
@@ -53,15 +54,22 @@ function MainPC({setTitulo}) {
     const [title, setTitle] = useState("Protege tu mundo");
         const {user} = useSelector((state) => state.auth);
        
+=======
+        if (content == 1) setTitulo("Hackatec2024")
+        else if (content == 2) setTitulo("Trivia");
+        else if (content == 3) setTitulo("Crowfunding")
+        return () => "H"
+    }, [content]);
+    const [title, setTitle] = useState("Hackatec2024");
+    const {user} = useSelector((state) => state.auth);
+>>>>>>> 4e22b444e8ee7359b598970b72bc3ba22a97a347
     return (
         <div className="flex flex-row md:flex-col home  bg-black" id="home">
             <div
-                className="p-4 bg-gray-400 rounded-md bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-10 border border-gray-100 flex-col flex gap-4 justify-center absolute left-32 top-5">
+                className="p-4 bg-gray-400 rounded-md bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-10 border border-gray-100 flex-col flex gap-4 justify-center absolute left-32 top-4">
                 <h2 className="text-gray-300 font-bold">Guardianes de este planeta</h2>
-                <div className="flex gap-4 items-center w-full">
-                
-				<AvatarGroup />
-			
+                <div className="flex gap-4 items-center w-full z-99">
+                    <AvatarGroup/>
                     <InviteFriendButton/>
                 </div>
             </div>
@@ -145,6 +153,7 @@ function MainPC({setTitulo}) {
                             </mesh>
                         )}
                         {content == 3 && (
+<<<<<<< HEAD
                             <mesh position={[-1.48, -0, 0]} scale={[.1, .1, .1]} rotation={[0, Math.PI / 2.8, 0]}
                             onClick={() => {
                                 navigate("/crowdfunding");
@@ -152,16 +161,25 @@ function MainPC({setTitulo}) {
                                 
                           <Cangrejo/>
                       </mesh>
+=======
+                            <mesh position={[-1.48, -0.3, 0]} scale={[.005, .005, .005]}
+                                  rotation={[0, Math.PI / 2.8, 0]}
+                                  onClick={() => {
+                                      navigate("/crowdfunding");
+                                  }}>
+
+                                <Panel_solar/>
+                            </mesh>
+>>>>>>> 4e22b444e8ee7359b598970b72bc3ba22a97a347
                         )}
                         <mesh
                             position={[-0.8, 0, 0]}
                             scale={[0.13, 0.13, 0.13]}
                             rotation={[0, 0, Math.PI / 2]}
                             onClick={() => {
-                                if (content > 2){
+                                if (content > 2) {
                                     setContent(1)
-                                } 
-                                else setContent(content + 1);
+                                } else setContent(content + 1);
                                 console.log(content)
                             }}
                             onPointerOver={(e) => (e.object.cursor = 'pointer')}
