@@ -1,3 +1,48 @@
+GET http://localhost:3000/api/users
+Content-Type: application/json
+User-Agent: IntelliJ HTTP Client/WebStorm 2024.1.5
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+content-length: 3
+
+{
+}
+
+<> 2024-09-12T011502.200.json
+
+###
+
+GET http://localhost:3000/api/world
+Content-Type: application/json
+User-Agent: IntelliJ HTTP Client/WebStorm 2024.1.5
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+content-length: 55
+
+{
+  "worldId": "407d5f70-ee36-403a-9e3c-4ce046cfbdb2"
+}
+
+<> 2024-09-12T011457.200.json
+
+###
+
+POST http://localhost:3000/api/auth/login
+Content-Type: application/json
+Content-Length: 60
+User-Agent: IntelliJ HTTP Client/WebStorm 2024.1.5
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+{
+  "email": "carlos1@gmail.com",
+  "password": "12345678"
+}
+
+<> 2024-09-12T011434.200.json
+
+###
+
 POST http://localhost:3000/api/auth/login
 Content-Type: application/json
 Content-Length: 59
@@ -10,7 +55,177 @@ Accept: */*
   "password": "12345678"
 }
 
-<> 2024-09-11T173127.200.json
+<> 2024-09-12T011428.401.json
+
+###
+
+POST http://localhost:3000/api/auth/register
+Content-Type: application/json
+Content-Length: 88
+User-Agent: IntelliJ HTTP Client/WebStorm 2024.1.5
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+{
+  "fullName": "carlos doe",
+  "email": "carlos1@gmail.com",
+  "password": "12345678"
+}
+
+<> 2024-09-12T011424.201.json
+
+###
+
+GET http://localhost:3000/api/users
+Content-Type: application/json
+User-Agent: IntelliJ HTTP Client/WebStorm 2024.1.5
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+content-length: 3
+
+{
+}
+
+<> 2024-09-12T011049.200.json
+
+###
+
+GET http://localhost:3000/api/users
+Content-Type: application/json
+User-Agent: IntelliJ HTTP Client/WebStorm 2024.1.5
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+content-length: 23
+
+{
+  "fullName": "xxx"
+}
+
+<> 2024-09-12T011037.200.json
+
+###
+
+GET http://localhost:3000/api/users
+Content-Type: application/json
+User-Agent: IntelliJ HTTP Client/WebStorm 2024.1.5
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+content-length: 23
+
+{
+  "fullName": "doe"
+}
+
+<> 2024-09-12T011019.200.json
+
+###
+
+GET http://localhost:3000/api/world
+Content-Type: application/json
+User-Agent: IntelliJ HTTP Client/WebStorm 2024.1.5
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+content-length: 55
+
+{
+  "worldId": "973aeacc-b414-4c0d-b79b-702c049888c6"
+}
+
+<> 2024-09-12T010957.200.json
+
+###
+
+GET http://localhost:3000/api/users
+Content-Type: application/json
+User-Agent: IntelliJ HTTP Client/WebStorm 2024.1.5
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+content-length: 23
+
+{
+  "fullName": "doe"
+}
+
+<> 2024-09-12T010753.200.json
+
+###
+
+GET http://localhost:3000/api/world
+Content-Type: application/json
+User-Agent: IntelliJ HTTP Client/WebStorm 2024.1.5
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+content-length: 55
+
+{
+  "worldId": "973aeacc-b414-4c0d-b79b-702c049888c6"
+}
+
+<> 2024-09-12T010745.200.json
+
+###
+
+GET http://localhost:3000/api/world/join
+Content-Type: application/json
+User-Agent: IntelliJ HTTP Client/WebStorm 2024.1.5
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+content-length: 174
+
+{
+  "joiningWorldId": "973aeacc-b414-4c0d-b79b-702c049888c6",
+  "leavingWorldId": "4e891cc9-6608-4cf9-be96-e67d106fed02",
+  "userId": "28e0f6dd-4fb4-44d8-b332-14cf1a523e68"
+}
+
+<> 2024-09-12T010722.200.json
+
+###
+
+GET http://localhost:3000/api/world
+Content-Type: application/json
+User-Agent: IntelliJ HTTP Client/WebStorm 2024.1.5
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+content-length: 55
+
+{
+  "worldId": "973aeacc-b414-4c0d-b79b-702c049888c6"
+}
+
+<> 2024-09-12T010714.200.json
+
+###
+
+GET http://localhost:3000/api/users
+Content-Type: application/json
+User-Agent: IntelliJ HTTP Client/WebStorm 2024.1.5
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+content-length: 23
+
+{
+  "fullName": "doe"
+}
+
+<> 2024-09-12T010637.200.json
+
+###
+
+POST http://localhost:3000/api/auth/register
+Content-Type: application/json
+Content-Length: 88
+User-Agent: IntelliJ HTTP Client/WebStorm 2024.1.5
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+{
+  "fullName": "carlos doe",
+  "email": "carlos1@gmail.com",
+  "password": "12345678"
+}
+
+<> 2024-09-12T010633.201.json
 
 ###
 
@@ -27,65 +242,39 @@ Accept: */*
   "password": "12345678"
 }
 
-<> 2024-09-11T173124.201.json
+<> 2024-09-12T010627.201.json
 
 ###
 
-POST http://localhost:3000/api/auth/login
+GET http://localhost:3000/api/users
 Content-Type: application/json
-Content-Length: 59
 User-Agent: IntelliJ HTTP Client/WebStorm 2024.1.5
 Accept-Encoding: br, deflate, gzip, x-gzip
 Accept: */*
+content-length: 174
 
 {
-  "email": "carlos@gmail.com",
-  "password": "12345678"
+  "joiningWorldId": "e19361b9-7289-49db-bcf8-b6e3facdda66",
+  "leavingWorldId": "9c0143a6-a0dc-4fd9-b31d-76cb2b7660e6",
+  "userId": "e4e19d25-e2f8-4991-990e-fad9a877474e"
 }
 
-<> 2024-09-11T173121.401.json
+<> 2024-09-12T010527.200.json
 
 ###
 
-GET http://localhost:3000/api/health
-User-Agent: IntelliJ HTTP Client/WebStorm 2024.1.5
-Accept-Encoding: br, deflate, gzip, x-gzip
-Accept: */*
-content-length: 0
-
-<> 2024-09-11T173118.200.json
-
-###
-
-POST http://localhost:3000/api/auth/login
+GET http://localhost:3000/api/users
 Content-Type: application/json
-Content-Length: 59
 User-Agent: IntelliJ HTTP Client/WebStorm 2024.1.5
 Accept-Encoding: br, deflate, gzip, x-gzip
 Accept: */*
+content-length: 23
 
 {
-  "email": "carlos@gmail.com",
-  "password": "12345678"
+  "fullName": "doe"
 }
 
-<> 2024-09-11T172751.200.json
-
-###
-
-POST http://localhost:3000/api/auth/login
-Content-Type: application/json
-Content-Length: 59
-User-Agent: IntelliJ HTTP Client/WebStorm 2024.1.5
-Accept-Encoding: br, deflate, gzip, x-gzip
-Accept: */*
-
-{
-  "email": "carlos@gmail.com",
-  "password": "12345678"
-}
-
-<> 2024-09-11T172748.200.json
+<> 2024-09-12T010452.200.json
 
 ###
 
@@ -102,7 +291,133 @@ Accept: */*
   "password": "12345678"
 }
 
-<> 2024-09-11T172744.400.json
+<> 2024-09-12T010448.201.json
+
+###
+
+POST http://localhost:3000/api/auth/register
+Content-Type: application/json
+Content-Length: 88
+User-Agent: IntelliJ HTTP Client/WebStorm 2024.1.5
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+{
+  "fullName": "carlos doe",
+  "email": "carlos1@gmail.com",
+  "password": "12345678"
+}
+
+<> 2024-09-12T010440.201.json
+
+###
+
+POST http://localhost:3000/api/auth/register
+Content-Type: application/json
+Content-Length: 82
+User-Agent: IntelliJ HTTP Client/WebStorm 2024.1.5
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+{
+  "fullName": "x doe",
+  "email": "carlos@gmail.com",
+  "password": "12345678"
+}
+
+<> 2024-09-12T010336.201.json
+
+###
+
+GET http://localhost:3000/api/users
+Content-Type: application/json
+User-Agent: IntelliJ HTTP Client/WebStorm 2024.1.5
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+content-length: 23
+
+{
+  "fullName": "doe"
+}
+
+<> 2024-09-12T005105.200.json
+
+###
+
+GET http://localhost:3000/api/users
+Content-Type: application/json
+User-Agent: IntelliJ HTTP Client/WebStorm 2024.1.5
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+content-length: 23
+
+{
+  "fullName": "doe"
+}
+
+<> 2024-09-12T004607.200.json
+
+###
+
+GET http://localhost:3000/api/users
+Content-Type: application/json
+User-Agent: IntelliJ HTTP Client/WebStorm 2024.1.5
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+content-length: 21
+
+{
+  "fullName": "x"
+}
+
+<> 2024-09-12T004602.200.json
+
+###
+
+POST http://localhost:3000/api/auth/register
+Content-Type: application/json
+Content-Length: 82
+User-Agent: IntelliJ HTTP Client/WebStorm 2024.1.5
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+{
+  "fullName": "x doe",
+  "email": "carlos@gmail.com",
+  "password": "12345678"
+}
+
+<> 2024-09-12T004559.201.json
+
+###
+
+GET http://localhost:3000/api/users
+Content-Type: application/json
+User-Agent: IntelliJ HTTP Client/WebStorm 2024.1.5
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+content-length: 21
+
+{
+  "fullName": "x"
+}
+
+<> 2024-09-12T004553.200.json
+
+###
+
+GET http://localhost:3000/api/users
+Content-Type: application/json
+User-Agent: IntelliJ HTTP Client/WebStorm 2024.1.5
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+content-length: 21
+
+{
+  "fullName": "j"
+}
+
+<> 2024-09-12T004548.200.json
 
 ###
 
@@ -119,23 +434,28 @@ Accept: */*
   "password": "12345678"
 }
 
-<> 2024-09-11T172740.201.json
+<> 2024-09-12T004541.201.json
 
 ###
 
-GET http://localhost:3000/api/health
+GET http://localhost:3000/api/users
+Content-Type: application/json
 User-Agent: IntelliJ HTTP Client/WebStorm 2024.1.5
 Accept-Encoding: br, deflate, gzip, x-gzip
 Accept: */*
-content-length: 0
+content-length: 21
 
-<> 2024-09-11T172736.200.json
+{
+  "fullName": "c"
+}
+
+<> 2024-09-12T004525.404.html
 
 ###
 
 POST http://localhost:3000/api/auth/register
 Content-Type: application/json
-Content-Length: 161
+Content-Length: 85
 User-Agent: IntelliJ HTTP Client/WebStorm 2024.1.5
 Accept-Encoding: br, deflate, gzip, x-gzip
 Accept: */*
@@ -143,48 +463,92 @@ Accept: */*
 {
   "fullName": "john doe",
   "email": "carlos@gmail.com",
-  "username": "carlos_123",
-  "id": "f6e08c84-e07e-4585-9805-faea78bbf080",
   "password": "12345678"
 }
 
-<> 2024-09-11T155224.201.json
+<> 2024-09-12T004521.201.json
 
 ###
 
-GET http://localhost:3000/api/health
+GET http://localhost:3000/api/world
+Content-Type: application/json
 User-Agent: IntelliJ HTTP Client/WebStorm 2024.1.5
 Accept-Encoding: br, deflate, gzip, x-gzip
 Accept: */*
-content-length: 0
+content-length: 55
 
-<> 2024-09-11T155221.200.json
+{
+  "worldId": "0d5af214-aece-4b6a-b89d-1be030a0a3d8"
+}
+
+<> 2024-09-12T002638.200.json
 
 ###
 
-GET http://localhost:3000/api/health
+GET http://localhost:3000/api/world
+Content-Type: application/json
 User-Agent: IntelliJ HTTP Client/WebStorm 2024.1.5
 Accept-Encoding: br, deflate, gzip, x-gzip
 Accept: */*
-content-length: 0
+content-length: 55
 
-<> 2024-09-11T155217.200.json
+{
+  "worldId": "0d5af214-aece-4b6a-b89d-1be030a0a3d8"
+}
+
+<> 2024-09-12T002637.200.json
 
 ###
 
-GET http://localhost:3000/api/health
+POST http://localhost:3000/api/auth/login
+Content-Type: application/json
+Content-Length: 59
 User-Agent: IntelliJ HTTP Client/WebStorm 2024.1.5
 Accept-Encoding: br, deflate, gzip, x-gzip
 Accept: */*
-content-length: 0
 
-<> 2024-09-11T155212.200.json
+{
+  "email": "carlos@gmail.com",
+  "password": "12345678"
+}
+
+<> 2024-09-12T002628.200.json
+
+###
+
+GET http://localhost:3000/api/world
+Content-Type: application/json
+User-Agent: IntelliJ HTTP Client/WebStorm 2024.1.5
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+content-length: 55
+
+{
+  "worldId": "a68656d9-d52e-4f55-b77b-098c4b9f03f9"
+}
+
+<> 2024-09-12T002623.404.json
+
+###
+
+GET http://localhost:3000/api/world
+Content-Type: application/json
+User-Agent: IntelliJ HTTP Client/WebStorm 2024.1.5
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+content-length: 55
+
+{
+  "worldId": "a68656d9-d52e-4f55-b77b-098c4b9f03f9"
+}
+
+<> 2024-09-12T002620.404.json
 
 ###
 
 POST http://localhost:3000/api/auth/register
 Content-Type: application/json
-Content-Length: 161
+Content-Length: 85
 User-Agent: IntelliJ HTTP Client/WebStorm 2024.1.5
 Accept-Encoding: br, deflate, gzip, x-gzip
 Accept: */*
@@ -192,12 +556,25 @@ Accept: */*
 {
   "fullName": "john doe",
   "email": "carlos@gmail.com",
-  "username": "carlos_123",
-  "id": "f6e08c84-e07e-4585-9805-faea78bbf080",
   "password": "12345678"
 }
 
-<> 2024-09-11T145512.201.json
+<> 2024-09-12T002609.201.json
+
+###
+
+GET http://localhost:3000/api/world
+Content-Type: application/json
+User-Agent: IntelliJ HTTP Client/WebStorm 2024.1.5
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+content-length: 55
+
+{
+  "worldId": "a68656d9-d52e-4f55-b77b-098c4b9f03f9"
+}
+
+<> 2024-09-12T002522.200.json
 
 ###
 
@@ -213,55 +590,13 @@ Accept: */*
   "password": "12345678"
 }
 
-<> 2024-09-11T145509.401.json
-
-###
-
-GET http://localhost:3000/api/health
-User-Agent: IntelliJ HTTP Client/WebStorm 2024.1.5
-Accept-Encoding: br, deflate, gzip, x-gzip
-Accept: */*
-content-length: 0
-
-<> 2024-09-11T145506.200.json
-
-###
-
-POST http://localhost:3000/api/auth/login
-Content-Type: application/json
-Content-Length: 59
-User-Agent: IntelliJ HTTP Client/WebStorm 2024.1.5
-Accept-Encoding: br, deflate, gzip, x-gzip
-Accept: */*
-
-{
-  "email": "carlos@gmail.com",
-  "password": "12345678"
-}
-
-<> 2024-09-11T145049.200.json
-
-###
-
-POST http://localhost:3000/api/auth/login
-Content-Type: application/json
-Content-Length: 59
-User-Agent: IntelliJ HTTP Client/WebStorm 2024.1.5
-Accept-Encoding: br, deflate, gzip, x-gzip
-Accept: */*
-
-{
-  "email": "carlos@gmail.com",
-  "password": "12345678"
-}
-
-<> 2024-09-11T145043.200.json
+<> 2024-09-12T002515.200.json
 
 ###
 
 POST http://localhost:3000/api/auth/register
 Content-Type: application/json
-Content-Length: 161
+Content-Length: 85
 User-Agent: IntelliJ HTTP Client/WebStorm 2024.1.5
 Accept-Encoding: br, deflate, gzip, x-gzip
 Accept: */*
@@ -269,12 +604,10 @@ Accept: */*
 {
   "fullName": "john doe",
   "email": "carlos@gmail.com",
-  "username": "carlos_123",
-  "id": "f6e08c84-e07e-4585-9805-faea78bbf080",
   "password": "12345678"
 }
 
-<> 2024-09-11T145040.201.json
+<> 2024-09-12T002508.201.json
 
 ###
 
@@ -290,17 +623,7 @@ Accept: */*
   "password": "12345678"
 }
 
-<> 2024-09-11T145036.401.json
-
-###
-
-GET http://localhost:3000/api/health
-User-Agent: IntelliJ HTTP Client/WebStorm 2024.1.5
-Accept-Encoding: br, deflate, gzip, x-gzip
-Accept: */*
-content-length: 0
-
-<> 2024-09-11T145031.200.json
+<> 2024-09-12T002504.401.json
 
 ###
 
@@ -316,36 +639,147 @@ Accept: */*
   "password": "12345678"
 }
 
-<> 2024-09-11T140956.200.json
+<> 2024-09-12T002500.200.json
 
 ###
 
-POST http://localhost:3000/api/auth/register
+GET http://localhost:3000/api/world
 Content-Type: application/json
-Content-Length: 161
+User-Agent: IntelliJ HTTP Client/WebStorm 2024.1.5
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+content-length: 55
+
+{
+  "worldId": "c1c815de-e70f-47f7-a812-7ee1afb6e9c6"
+}
+
+<> 2024-09-12T002110.200.json
+
+###
+
+POST http://localhost:3000/api/auth/login
+Content-Type: application/json
+Content-Length: 59
 User-Agent: IntelliJ HTTP Client/WebStorm 2024.1.5
 Accept-Encoding: br, deflate, gzip, x-gzip
 Accept: */*
 
 {
-  "fullName": "john doe",
   "email": "carlos@gmail.com",
-  "username": "carlos_123",
-  "id": "f6e08c84-e07e-4585-9805-faea78bbf080",
   "password": "12345678"
 }
 
-<> 2024-09-11T140953.201.json
+<> 2024-09-12T002053.200.json
 
 ###
 
-GET http://localhost:3000/api/health
+GET http://localhost:3000/api/world
+Content-Type: application/json
 User-Agent: IntelliJ HTTP Client/WebStorm 2024.1.5
 Accept-Encoding: br, deflate, gzip, x-gzip
 Accept: */*
-content-length: 0
+content-length: 54
 
-<> 2024-09-11T140946.200.json
+{
+  "userId": "b7b534c4-6632-461e-9c25-7cb7b781ec49"
+}
+
+<> 2024-09-11T225203.401.json
+
+###
+
+POST http://localhost:3000/api/auth/login
+Content-Type: application/json
+Content-Length: 59
+User-Agent: IntelliJ HTTP Client/WebStorm 2024.1.5
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+{
+  "email": "carlos@gmail.com",
+  "password": "12345678"
+}
+
+<> 2024-09-11T225153.200.json
+
+###
+
+POST http://localhost:3000/api/auth/login
+Content-Type: application/json
+Content-Length: 59
+User-Agent: IntelliJ HTTP Client/WebStorm 2024.1.5
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+{
+  "email": "carlos@gmail.com",
+  "password": "12345678"
+}
+
+<> 2024-09-11T225151.200.json
+
+###
+
+POST http://localhost:3000/api/auth/login
+Content-Type: application/json
+Content-Length: 59
+User-Agent: IntelliJ HTTP Client/WebStorm 2024.1.5
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+{
+  "email": "carlos@gmail.com",
+  "password": "12345678"
+}
+
+<> 2024-09-11T225145.200.json
+
+###
+
+GET http://localhost:3000/api/world
+Content-Type: application/json
+User-Agent: IntelliJ HTTP Client/WebStorm 2024.1.5
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+content-length: 54
+
+{
+  "userId": "b7b534c4-6632-461e-9c25-7cb7b781ec49"
+}
+
+<> 2024-09-11T225136.401.json
+
+###
+
+GET http://localhost:3000/api/world
+Content-Type: application/json
+User-Agent: IntelliJ HTTP Client/WebStorm 2024.1.5
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+content-length: 54
+
+{
+  "userId": "b7b534c4-6632-461e-9c25-7cb7b781ec49"
+}
+
+<> 2024-09-11T225133.401.json
+
+###
+
+POST http://localhost:3000/api/auth/login
+Content-Type: application/json
+Content-Length: 59
+User-Agent: IntelliJ HTTP Client/WebStorm 2024.1.5
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+{
+  "email": "carlos@gmail.com",
+  "password": "12345678"
+}
+
+<> 2024-09-11T225113.200.json
 
 ###
 

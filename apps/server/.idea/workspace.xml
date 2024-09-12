@@ -5,55 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="cd53600a-8e1c-4d1b-9a1e-f7b8fb6da146" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/friends/application/create/CreateUserCommand.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/friends/application/create/CreateUserCommandHandler.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/friends/application/create/LogOnUserCreated.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/friends/application/update/UpdateUserCommand.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/friends/application/update/UpdateUserCommandHandler.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/friends/domain/entities/User.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/friends/domain/entities/UserId.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/friends/domain/errors/EmailAlreadyTakenError.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/friends/domain/errors/InvalidEmailAddressError.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/friends/domain/errors/InvalidFullNameError.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/friends/domain/errors/InvalidUserNameError.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/friends/domain/errors/UserIdAlreadyTakenError.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/friends/domain/errors/UsernameAlreadyTakenError.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/friends/domain/events/UserCreated.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/friends/domain/repositories/UserRepository.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/friends/domain/value-objects/Email.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/friends/domain/value-objects/FullName.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/friends/domain/value-objects/UserName.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/friends/infrastructure/InMemoryUserRepository.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/shared/application/commands/Command.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/shared/application/commands/CommandBus.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/shared/application/commands/CommandHandler.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/shared/application/commands/CommandHandlerNotRegisteredError.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/shared/application/queries/Query.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/shared/application/queries/QueryBus.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/shared/application/queries/QueryHandler.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/shared/application/queries/QueryHandlerNotRegisteredError.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/shared/application/queries/Response.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/shared/domain/entities/Entity.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/shared/domain/errors/DomainError.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/shared/domain/errors/InvalidUUIDError.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/shared/domain/events/DomainEvent.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/shared/domain/events/DomainEventSubscriber.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/shared/domain/events/EventBus.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/shared/domain/events/HasDomainEvents.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/shared/domain/values-objects/IEquatable.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/shared/domain/values-objects/UUID.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/shared/domain/values-objects/ValueObject.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/shared/infrastructure/ErrorMapper.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/shared/infrastructure/InMemoryEventBus.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/shared/infrastructure/RequiredValuesError.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/shared/infrastructure/RequiredValuesValidator.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/shared/infrastructure/commands/CommandHandlers.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/shared/infrastructure/commands/InMemoryCommandBus.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/shared/infrastructure/controllers/Controller.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/shared/infrastructure/controllers/HealthController.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/shared/infrastructure/queries/InMemoryQueryBus.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/shared/infrastructure/queries/QueryHandlers.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/../../package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -97,7 +49,7 @@
     "Vitest.Login User Controller.executor": "Run",
     "Vitest.RegisterUserController.executor": "Run",
     "git-widget-placeholder": "main",
-    "last_opened_file_path": "/home/carlos/programacion/hackateck-regional/apps/server/src",
+    "last_opened_file_path": "/home/carlos/programacion/hackateck-regional/apps/client",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -184,6 +136,7 @@
       <updated>1726084871302</updated>
       <workItem from="1726084872432" duration="447000" />
       <workItem from="1726085342030" duration="2516000" />
+      <workItem from="1726110324146" duration="115000" />
     </task>
     <servers />
   </component>

@@ -12,7 +12,12 @@ import Logout from "../pages/Logout";
 import LayoutFunding from "../pages/crowdfunding/Layout.jsx";
 import IndexCrowdFunding from "../pages/crowdfunding/Index";
 import AllFunding from "../pages/crowdfunding/All";
+<<<<<<< HEAD
 import StartNowFunding from "../pages/crowdfunding/StartNow.jsx";
+=======
+import Trivia from "../pages/trivia/Trivia.jsx";
+
+>>>>>>> bc4ce76ca3269fad8512a54228feee06cd2e42bb
 
 const router = createBrowserRouter([
 	{
@@ -42,6 +47,16 @@ const router = createBrowserRouter([
 			{
 				path: "startnow",
 				element: <StartNowFunding />,
+			},
+		],
+	},
+	{
+		path: "/trivia",
+		element: <Trivia />,
+		children: [
+			{
+				index: true,
+				element: <Trivia />,
 			},
 		],
 	},

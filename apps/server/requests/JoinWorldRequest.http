@@ -1,0 +1,9 @@
+### join
+GET http://localhost:3000/api/world/join
+Content-Type: application/json
+
+{
+  "joiningWorldId": "973aeacc-b414-4c0d-b79b-702c049888c6",
+  "leavingWorldId": "4e891cc9-6608-4cf9-be96-e67d106fed02",
+  "userId": "28e0f6dd-4fb4-44d8-b332-14cf1a523e68"
+}

@@ -1,0 +1,7 @@
+###  id exists
+GET http://localhost:3000/api/world
+Content-Type: application/json
+
+{
+  "worldId": "407d5f70-ee36-403a-9e3c-4ce046cfbdb2"
+}
