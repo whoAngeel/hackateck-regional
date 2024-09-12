@@ -49,7 +49,7 @@ Resources:
     createProjectFunction:
         Type: AWS::Serverless::Function
         Properties:
-            Handler: src/projects/create-project.createProjectHandler
+            Handler: src/projects/put-item.createProjectHandler
             Runtime: nodejs20.x
             Architectures:
                 - x86_64

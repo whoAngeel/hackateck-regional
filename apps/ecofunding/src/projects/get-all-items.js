@@ -16,6 +16,7 @@ export const getAll = async (event) => {
 	};
 	try {
 		const data = await ddbDocClient.send(new ScanCommand(params));
+
 		let items = data.Items;
 	} catch (error) {
 		console.log("ERROR", error);
@@ -24,7 +25,7 @@ export const getAll = async (event) => {
 	const response = {
 		statusCode: 200,
 		body: JSON.stringify(items),
-	
+	};
 
 	console.info(
 		`response from: ${event.path} statusCode: ${response.statusCode} body: ${response.body}`
