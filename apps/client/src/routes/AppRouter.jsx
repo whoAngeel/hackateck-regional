@@ -5,7 +5,8 @@ import { createBrowserRouter, RouterProvider, Route, Link } from "react-router-d
 import Home from "../pages/Home";
 import Login from "../pages/Login";
 import Register from "../pages/Register";
-import Game from "../pages/Game";
+import Game from "../pages/game/Game";
+import GameLayout from "../pages/game/GameLayout";
 import ProtectedRoute from "../utils/ProtectedRoute";
 
 const router = createBrowserRouter([
@@ -25,9 +26,15 @@ const router = createBrowserRouter([
 		path: "/game",
 		element: (
 			<ProtectedRoute>
-				<Game />
+				<GameLayout />
 			</ProtectedRoute>
 		),
+		children: [
+			{
+				index: true,
+				element: <Game />,
+			},
+		],
 	},
 ]);
 

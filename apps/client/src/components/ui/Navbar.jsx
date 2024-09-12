@@ -15,7 +15,7 @@ function Navbar() {
 		}
 	};
 	return (
-		<div className="navbar bg-primary text-white">
+		<div className="navbar bg-primary-500 text-primary-50">
 			<div className="flex-1">
 				<a className="btn btn-ghost text-xl">GreenGuardian</a>
 			</div>

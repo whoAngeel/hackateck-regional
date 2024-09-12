@@ -12,6 +12,7 @@ function Register() {
 	const { isLoading, token, error } = useSelector((state) => state.auth);
 	const [messageApi, contextHolder] = message.useMessage();
 	function onFinish(values) {
+		console.log(values);
 		dispatch(registerAuth(values));
 	}
 
@@ -33,20 +34,20 @@ function Register() {
 	}, [token]);
 
 	return (
-		<div className="flex items-center justify-center min-h-screen bg-base-200">
+		<div className="flex items-center justify-center min-h-screen bg-base-50">
 			{contextHolder}
 			<Form
 				onFinish={onFinish}
 				form={form}
 				layout="vertical"
-				className="w-10-12 sm:w-10/12 lg:w-4/12 -mt-32 flex flex-col gap-2 p-4 bg-base-100 rounded-md"
+				className="w-10-12 sm:w-10/12 lg:w-4/12 -mt-32 flex flex-col gap-2 p-4 bg-base-400 rounded-md"
 			>
 				<h2 className="text-xl font-semibold text-center my-2">
 					Crear una cuenta nueva
 				</h2>
 				<Form.Item
 					label="Nombre"
-					name="fullname"
+					name="fullName"
 					required
 					rules={[
 						{

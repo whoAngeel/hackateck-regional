@@ -26,7 +26,7 @@ function Home() {
 			<Navbar />
 
 			{/* Hero section */}
-			<div className="flex-1  flex flex-col items-center justify-center bg-hero-pattern bg-cover bg-center text-center  min-h-screen p-4">
+			<div className="flex-1  flex flex-col items-center justify-center bg-base-50 bg-hero-pattern bg-cover bg-center text-center  min-h-screen p-4">
 				<h1 className="text-4xl font-bold ">
 					Salva el planeta con GreenGuardian
 				</h1>
@@ -36,7 +36,7 @@ function Home() {
 				</h2>
 				<button
 					onClick={handleStart}
-					className="mt-6 px-8 py-3 bg-green-500 text-white rounded-md hover:bg-green-600"
+					className="mt-6 px-8 py-3 bg-primary-500 text-white rounded-md hover:bg-secondary-600"
 				>
 					Comenzar
 				</button>
@@ -44,24 +44,29 @@ function Home() {
 
 			{/* caracteristicas section */}
 
-			<section className="bg-success  py-12">
+			<section className="bg-info-700  py-12">
 				<h2 className="text-3xl text-center font-medium">
 					{" "}
 					Caracteristicas del juego
 				</h2>
 			</section>
 
-			<section className="bg-green-400 py-12 text-slate-100 flex flex-col justify-center items-center gap-4">
+			<section className="bg-primary-500 py-12 text-slate-100 flex flex-col justify-center items-center gap-4">
 				<h2 className="text-3xl text-center font-medium">
 					¿Estas listo para salvar el planeta?
 				</h2>
-				<button className="btn bg-green-100 w-1/2" onClick={handleStart}>
-					Comienza a ahora
-				</button>
+				<div>
+					<button
+						className="btn btn-wide bg-secondary-500 hover:bg-secondary-600 text-slate-900 "
+						onClick={handleStart}
+					>
+						Comienza a ahora
+					</button>
+				</div>
 			</section>
 
 			{/* footer section */}
-			<footer className="bg-neutral text-neutral-content  py-4 text-center text-xs">
+			<footer className="bg-neutral-700 text-neutral-content  py-4 text-center text-xs">
 				<div>
 					<p>
 						&copy; {new Date().getFullYear()} 5T. Todos los derechos

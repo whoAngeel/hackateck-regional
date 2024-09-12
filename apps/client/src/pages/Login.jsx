@@ -30,13 +30,13 @@ function Login() {
 		dispatch(loginAuth(values));
 	};
 	return (
-		<div className="flex h-full items-center justify-center min-h-screen bg-base-200">
+		<div className="flex h-full items-center justify-center min-h-screen bg-base-50 ">
 			{contextHolder}
 			<Form
 				form={form}
 				onFinish={handleFinish}
 				layout="vertical"
-				className="w-10-12 sm:w-10/12 lg:w-4/12 -mt-32 flex flex-col gap-2 p-4 bg-base-100 rounded-md"
+				className="w-10-12 sm:w-10/12 lg:w-4/12 -mt-32 flex flex-col gap-2 p-4 bg-base-400 rounded-md"
 			>
 				<h2 className="text-xl font-semibold text-center my-2">
 					Inicia sesión para jugar
