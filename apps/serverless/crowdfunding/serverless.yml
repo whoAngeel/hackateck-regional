@@ -1,0 +1,51 @@
+service: crowdfunding-api
+
+frameworkVersion: "4.0"
+
+provider:
+    name: aws
+    runtime: nodejs18.x
+    region: us-east-1
+    environment:
+        DYNAMODB_TABLE_PROJECTS: projectsTable
+        DYNAMODB_TABLE_USERS: usersTable
+
+functions:
+    createProject:
+        handler: src/projects/create.handler
+        events:
+            - http:
+                  path: projects
+                  method: post
+    getProjects:
+        handler: src/projects/get.handler
+        events:
+            - http:
+                  path: projects
+                  method: get
+
+resources:
+    Resources:
+        ProjectsTable:
+            Type: AWS::DynamoDB::Table
+            Properties:
+                TableName: ${self:provider.environment.DYNAMODB_TABLE_PROJECTS}
+                AttributeDefinitions:
+                    - AttributeName: id
+                      AttributeType: S
+                KeySchema:
+                    - AttributeName: id
+                      KeyType: HASH
+                BillingMode: PAY_PER_REQUEST
+
+        UsersTable:
+            Type: AWS::DynamoDB::Table
+            Properties:
+                TableName: ${self:provider.environment.DYNAMODB_TABLE_USERS}
+                AttributeDefinitions:
+                    - AttributeName: id
+                      AttributeType: S
+                KeySchema:
+                    - AttributeName: id
+                      KeyType: HASH
+                BillingMode: PAY_PER_REQUEST

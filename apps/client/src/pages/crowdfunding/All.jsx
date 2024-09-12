@@ -3,8 +3,10 @@ import Card from "../../components/funding/Card";
 import { Button, Tooltip } from "antd";
 import { GoArrowLeft, GoHomeFill } from "react-icons/go";
 import { Link } from "react-router-dom";
+import { useSelector } from "react-redux";
 
 function All() {
+	const { funds } = useSelector((state) => state.funding);
 	return (
 		<div className="bg-base-200 min-h-screen">
 			<div className="fixed top-0 left-0 mt-4 ml-4">
@@ -24,10 +26,15 @@ function All() {
 			</h1>
 
 			<div className="bg-base-200 w-10/12 mx-auto grid grid-cols-3 py-10 gap-6">
-				<Card recaudado={1000} meta={1900} />
-				<Card recaudado={700} meta={1200} />
-				<Card recaudado={1030} meta={2900} />
-				<Card recaudado={1900} meta={1900} />
+				{funds.map((fund) => (
+					<Card
+						key={fund.id}
+						recaudado={fund.collected}
+						meta={fund.fundingGoal}
+						imageurl={fund.image}
+						name={fund.name}
+					/>
+				))}
 			</div>
 		</div>
 	);

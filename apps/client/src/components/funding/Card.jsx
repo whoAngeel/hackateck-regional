@@ -1,18 +1,18 @@
 import { Progress, Slider } from "antd";
 import React from "react";
 
-function Card({ meta, recaudado }) {
+function Card({ meta, recaudado, name, imageurl }) {
 	const recaudadoPorcentaje = (recaudado / meta) * 100;
 	return (
 		<div className="bg-base-200 w-full rounded-lg">
 			<img
-				src="https://picsum.photos/300/200"
-				className="aspect-video w-full rounded-lg"
+				src={imageurl}
+				className="aspect-video w-full object-cover rounded-lg"
 				alt=""
 			/>
 
 			<div className=" w-full">
-				<h3 className="text-2xl font-semibold py-2">Titulo</h3>
+				<h3 className="text-2xl font-semibold py-2">{name}</h3>
 				<div className="w-full">
 					<p>Meta: ${meta}</p>
 					<Progress
