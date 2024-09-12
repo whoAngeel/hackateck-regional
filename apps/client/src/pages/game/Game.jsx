@@ -1,16 +1,11 @@
 import {useMediaQuery} from "react-responsive";
 import MainPC from "../../components/3D/MainPC";
 import MainPhone from "../../components/3D/MainPhone";
-<<<<<<< Updated upstream
-import "./Game.css";
 import { useState } from "react";
-=======
 import "./Game.css"
 import {Button} from 'antd'
 import {FiMessageSquare} from "react-icons/fi";
 import {Fragment} from "react";
->>>>>>> Stashed changes
-
 
 function Game() {
     const isMobile = useMediaQuery({query: '(max-width: 767px)'});

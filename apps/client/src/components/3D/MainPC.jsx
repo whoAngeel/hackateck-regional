@@ -43,19 +43,14 @@ const ResponsiveCamera = () => {
 function MainPC({setTitulo}) {
     const navigate = useNavigate();
     const [content, setContent] = useState(1);
-<<<<<<< Updated upstream
     useEffect(() => {
-        if(content == 1) setTitulo("Hackatec2024")
-        else if(content == 2)setTitulo("Trivia");
-        else if(content == 3)setTitulo("Crowfunding")
+        if (content == 1) setTitulo("Hackatec2024")
+        else if (content == 2) setTitulo("Trivia");
+        else if (content == 3) setTitulo("Crowfunding")
         return () => "H"
-    },[content]);
+    }, [content]);
     const [title, setTitle] = useState("Hackatec2024");
-        const {user} = useSelector((state) => state.auth);
-       
-=======
     const {user} = useSelector((state) => state.auth);
->>>>>>> Stashed changes
     return (
         <div className="flex flex-row md:flex-col home  bg-black" id="home">
             <div
@@ -146,23 +141,23 @@ function MainPC({setTitulo}) {
                             </mesh>
                         )}
                         {content == 3 && (
-                            <mesh position={[-1.48, -0.3, 0]} scale={[.005, .005, .005]} rotation={[0, Math.PI / 2.8, 0]}
-                            onClick={() => {
-                                navigate("/crowdfunding");
-                            }}>
-                                
-                          <Panel_solar/>
-                      </mesh>
+                            <mesh position={[-1.48, -0.3, 0]} scale={[.005, .005, .005]}
+                                  rotation={[0, Math.PI / 2.8, 0]}
+                                  onClick={() => {
+                                      navigate("/crowdfunding");
+                                  }}>
+
+                                <Panel_solar/>
+                            </mesh>
                         )}
                         <mesh
                             position={[-0.8, 0, 0]}
                             scale={[0.13, 0.13, 0.13]}
                             rotation={[0, 0, Math.PI / 2]}
                             onClick={() => {
-                                if (content > 2){
+                                if (content > 2) {
                                     setContent(1)
-                                } 
-                                else setContent(content + 1);
+                                } else setContent(content + 1);
                                 console.log(content)
                             }}
                             onPointerOver={(e) => (e.object.cursor = 'pointer')}
