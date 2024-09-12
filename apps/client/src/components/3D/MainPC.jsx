@@ -13,6 +13,7 @@ import icon from "./../../constants/icon";
 import StatCard from "../../components/ui/StatCard";
 import {Sprite, SpriteMaterial, TextureLoader} from "three";
 import Arrow from "../../../public/arrow/Arrow";
+import Panel_solar from "../../../public/panel-solar/Panel_solar.jsx";
 import Trivia from "../../../public/trivia/Trivia";
 import {useNavigate} from "react-router-dom";
 
@@ -39,10 +40,18 @@ const ResponsiveCamera = () => {
     return null; // No necesita renderizar nada
 };
 
-function MainPC() {
+function MainPC({setTitulo}) {
     const navigate = useNavigate();
     const [content, setContent] = useState(1);
+    useEffect(() => {
+        if(content == 1) setTitulo("Hackatec2024")
+        else if(content == 2)setTitulo("Trivia");
+        else if(content == 3)setTitulo("Crowfunding")
+        return () => "H"
+    },[content]);
+    const [title, setTitle] = useState("Hackatec2024");
         const {user} = useSelector((state) => state.auth);
+       
     return (
         <div className="flex flex-row md:flex-col home  bg-black" id="home">
             <div
@@ -134,12 +143,23 @@ function MainPC() {
                                 <Trivia/>
                             </mesh>
                         )}
+                        {content == 3 && (
+                            <mesh position={[-1.48, -0.3, 0]} scale={[.005, .005, .005]} rotation={[0, Math.PI / 2.8, 0]}
+                            onClick={() => {
+                                navigate("/crowdfunding");
+                            }}>
+                                
+                          <Panel_solar/>
+                      </mesh>
+                        )}
                         <mesh
                             position={[-0.8, 0, 0]}
                             scale={[0.13, 0.13, 0.13]}
                             rotation={[0, 0, Math.PI / 2]}
                             onClick={() => {
-                                if (content > 1) setContent(1)
+                                if (content > 2){
+                                    setContent(1)
+                                } 
                                 else setContent(content + 1);
                                 console.log(content)
                             }}
@@ -154,7 +174,7 @@ function MainPC() {
                             rotation={[0, 0, -Math.PI / 2]}
                             onClick={() => {
 
-                                if (content < 2) setContent(2);
+                                if (content < 2) setContent(3);
                                 else setContent(content - 1);
                             }}
                             onPointerOver={(e) => (e.object.cursor = 'pointer')}
