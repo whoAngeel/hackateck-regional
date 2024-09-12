@@ -1,5 +1,6 @@
-import { DynamoDBClient } from "@aws-sdk/client-dynamodb";
-import { DynamoDBDocumentClient, ScanCommand } from "@aws-sdk/lib-dynamodb";
+const { DynamoDBClient } = require("@aws-sdk/client-dynamodb");
+const { DynamoDBDocumentClient, ScanCommand } = require("@aws-sdk/lib-dynamodb");
+
 const client = new DynamoDBClient({});
 const ddbDocClient = DynamoDBDocumentClient.from(client);
 const tableName = process.env.PROJECT_TABLE;
@@ -14,10 +15,11 @@ export const getAll = async (event) => {
 	const params = {
 		TableName: tableName,
 	};
+	let items = null;
 	try {
 		const data = await ddbDocClient.send(new ScanCommand(params));
 
-		let items = data.Items;
+		items = data.Items;
 	} catch (error) {
 		console.log("ERROR", error);
 	}

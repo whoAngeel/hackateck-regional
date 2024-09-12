@@ -5,7 +5,7 @@ codeuri = "C:\\Users\\whoangel\\Documents\\DEV\\hackatones\\hackateck-regional\\
 runtime = "nodejs20.x"
 architecture = "x86_64"
 handler = "src/projects/get-all-items.getAll"
-manifest_hash = "f790860b7b403acf5906005570bb8cf4"
+manifest_hash = "6a3fcc0b63d6758cfa8b054eb007921c"
 packagetype = "Zip"
 functions = ["getAllProjectsFunction", "createProjectFunction"]
 
