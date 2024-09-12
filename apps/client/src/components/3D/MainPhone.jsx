@@ -184,7 +184,7 @@ function MainPhone({ setTitulo }) {
             >
               <Arrow />
             </mesh>
-            <mesh position={[0, 0, 0]}>
+            <mesh position={[0, -0.2, 0]}>
               <EarthCartoon />
             </mesh>
           </Suspense>
