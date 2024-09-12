@@ -19,7 +19,7 @@ function Game() {
                 <h1 className="text-white font-psemibold text-3xl ">{titulo}</h1>
                 <h5 className="text-white font-plight md:text-sm">Pulsa sobre cualquier avion</h5>
             </div>
-            {isMobile && <MainPhone />} {/* Carga componente para móviles */}
+            {isMobile && <MainPhone setTitulo={setTitulo} />} {/* Carga componente para móviles */}
             {isPC && <MainPC setTitulo={setTitulo}/>} {/* Carga componente para PCs */}
         </>
 
