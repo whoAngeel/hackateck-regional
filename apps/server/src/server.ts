@@ -6,9 +6,8 @@ import cors from "cors";
 import errorHandler from "errorhandler";
 import {registerRouteFiles} from "./routes";
 import httpStatus from "http-status";
-import {ContainerBuilder} from "node-dependency-injection";
 
-export default function getServer(container: ContainerBuilder): Express {
+export default function getServer(): Express {
     const server = express();
     configureHeaders(server)
     registerRoutes(server)
@@ -27,7 +26,7 @@ export default function getServer(container: ContainerBuilder): Express {
         const router = Router();
         router.use(cors());
         router.use(errorHandler());
-        registerRouteFiles(router, container);
+        registerRouteFiles(router);
         server.use("/api", router);
         router.use((err: Error, _req: Request, res: Response, _next: NextFunction) => {
             console.error(err);
