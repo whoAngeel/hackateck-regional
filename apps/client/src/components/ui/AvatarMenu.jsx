@@ -27,9 +27,9 @@ function AvatarMenu() {
 			<Avatar
 				className="cursor-pointer bg-success-300"
 				size={{
-					xs: 32,
-					sm: 32,
-					md: 40,
+					xs: 38,
+					sm: 38,
+					md: 48,
 					lg: 64,
 					xl: 70,
 					xxl: 100,
