@@ -41,19 +41,6 @@ const ResponsiveCamera = () => {
 	return null; // No necesita renderizar nada
 };
 
-<<<<<<< HEAD
-function MainPC({ setTitulo }) {
-	const navigate = useNavigate();
-	const [content, setContent] = useState(1);
-	useEffect(() => {
-		if (content == 1) setTitulo("Hackatec2024");
-		else if (content == 2) setTitulo("Trivia");
-		else if (content == 3) setTitulo("Crowfunding");
-		return () => "H";
-	}, [content]);
-	const [title, setTitle] = useState("Hackatec2024");
-	const { user } = useSelector((state) => state.auth);
-=======
 function MainPC({setTitulo}) {
     const navigate = useNavigate();
     const [content, setContent] = useState(1);
@@ -67,23 +54,7 @@ function MainPC({setTitulo}) {
         const {user} = useSelector((state) => state.auth);
        
     return (
-        <div className="flex flex-row md:flex-col home  bg-black" id="home">
-            <div
-                className="p-4 bg-gray-400 rounded-md bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-10 border border-gray-100 flex-col flex gap-4 justify-center absolute left-32 top-4">
-                <h2 className="text-gray-300 font-bold">Guardianes de este planeta</h2>
-                <div className="flex gap-4 items-center w-full z-99">
-                    <AvatarGroup/>
-                    <InviteFriendButton/>
-                </div>
-            </div>
-            <div className="w-full mx-auto md:mt-[-150px]">
-                <Canvas camera={{position: [0, 0, 0]}}>
-                    <ResponsiveCamera/>
-                    <ambientLight/>
-                    <OrbitControls enableZoom={false}/>
->>>>>>> 9c2b7c408d1c1b80e450aa802524bcab21fb40eb
-
-	return (
+        
 		<div className="flex flex-row md:flex-col home  bg-black" id="home">
 			<div className="p-4 bg-gray-400 rounded-md bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-10 border border-gray-100 flex-col flex gap-4 justify-center absolute left-32 top-4">
 				<h2 className="text-gray-300 font-bold">
@@ -124,7 +95,6 @@ function MainPC({setTitulo}) {
 										Estadisticas
 									</Text>
 
-<<<<<<< HEAD
 									<Text
 										position={[0, 0.2, 0.008]} // Ajusta la posición del texto en la malla
 										fontSize={0.06} // Tamaño del texto
@@ -238,75 +208,6 @@ function MainPC({setTitulo}) {
 			</div>
 		</div>
 	);
-=======
-                                </mesh>
-                            </group>
-                        )}
-                        {content == 2 && (
-                            <mesh position={[-1.58, -0.7, 0]} scale={[12, 12, 12]} rotation={[0, -Math.PI / 2, 0]}
-                                  onClick={() => {
-                                      navigate("/trivia");
-                                  }}>
-                                <Trivia/>
-                            </mesh>
-                        )}
-                        {content == 3 && (
-                            <mesh position={[-1.48, -0, 0]} scale={[.1, .1, .1]} rotation={[0, Math.PI / 2.8, 0]}
-                            onClick={() => {
-                                navigate("/crowdfunding");
-                            }}>
-                                
-                          <Cangrejo/>
-                      </mesh>
-                        )}
-                        <mesh
-                            position={[-0.8, 0, 0]}
-                            scale={[0.13, 0.13, 0.13]}
-                            rotation={[0, 0, Math.PI / 2]}
-                            onClick={() => {
-                                if (content > 2) {
-                                    setContent(1)
-                                } else setContent(content + 1);
-                                console.log(content)
-                            }}
-                            onPointerOver={(e) => (e.object.cursor = 'pointer')}
-                            onPointerOut={(e) => (e.object.cursor = 'auto')}
-                        >
-                            <Arrow/>
-                        </mesh>
-                        <mesh
-                            position={[-2.2, 0, 0]}
-                            scale={[0.13, 0.13, 0.13]}
-                            rotation={[0, 0, -Math.PI / 2]}
-                            onClick={() => {
-
-                                if (content < 2) setContent(3);
-                                else setContent(content - 1);
-                            }}
-                            onPointerOver={(e) => (e.object.cursor = 'pointer')}
-                            onPointerOut={(e) => (e.object.cursor = 'auto')}
-                        >
-                            <Arrow/>
-                        </mesh>
-                        <mesh position={[0.7, 0, 0]}>
-                            <EarthCartoon/>
-                        </mesh>
-                    </Suspense>
-                    <Stars
-                        radius={200}
-                        depth={100}
-                        count={500}
-                        factor={20}
-                        saturation={0}
-                        fade
-                        speed={1}
-                    />
-                    <Environment preset="city"/>
-                </Canvas>
-            </div>
-        </div>
-    );
->>>>>>> 9c2b7c408d1c1b80e450aa802524bcab21fb40eb
 }
 
 export default MainPC;
