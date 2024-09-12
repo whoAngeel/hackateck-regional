@@ -13,8 +13,7 @@ import icon from "./../../constants/icon";
 import StatCard from "../../components/ui/StatCard";
 import { Sprite, SpriteMaterial, TextureLoader } from "three";
 import Arrow from "../../../public/arrow/Arrow";
-import Panel_solar from "../../../public/panel-solar/Panel_solar.jsx";
-import Cangrejo from "../../../public/cangrejo/Cangrejo.jsx";
+import Chart from "../../../public/chart/Chart.jsx";
 import Trivia from "../../../public/trivia/Trivia";
 import { useNavigate } from "react-router-dom";
 
@@ -152,14 +151,14 @@ function MainPC({setTitulo}) {
 						)}
 						{content == 3 && (
 							<mesh
-								position={[-1.48, -0.3, 0]}
-								scale={[0.005, 0.005, 0.005]}
-								rotation={[0, Math.PI / 2.8, 0]}
+								position={[-1.48, 0, 0]}
+								scale={[1, 1, 1]}
+								
 								onClick={() => {
 									navigate("/crowdfunding");
 								}}
 							>
-								<Panel_solar />
+								<Chart/>
 							</mesh>
 						)}
 						<mesh

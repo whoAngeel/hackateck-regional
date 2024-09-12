@@ -17,8 +17,8 @@ import { Avatar } from "antd";
 import { useSelector } from "react-redux";
 import InviteFriendButton from "../ui/InviteFriendButton.jsx";
 import AvatarGroup from "../ui/AvatarGroup.jsx";
-import Cangrejo from "../../../public/cangrejo/Cangrejo.jsx";
 import Trivia from "../../../public/trivia/Trivia";
+import Chart from "../../../public/chart/Chart.jsx";
 
 const ResponsiveCamera = () => {
     const {camera, size} = useThree();
@@ -148,12 +148,12 @@ function MainPhone({ setTitulo }) {
               </mesh>
             )}
             {content == 3 && (
-              <mesh position={[-0, -1.8, 0.5]} scale={[.1, .1, .1]} rotation={[0, Math.PI / 2.8, 0]}
+              <mesh position={[-0, -1.8, 0.5]} scale={[.9, .9, .9]}
               onClick={() => {
                   navigate("/crowdfunding");
               }}>
                   
-            <Cangrejo/>
+            <Chart/>
         </mesh>
              )}
             <mesh
